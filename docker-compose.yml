@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      - selenium
+  selenium:
+    image: selenium/standalone-chrome:latest
+    ports:
+      - "4444:4444"
