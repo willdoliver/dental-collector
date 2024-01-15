@@ -1,3 +1,12 @@
-Django>=4
-selenium>=4
-djangorestframework==3.14
+selenium==4.16.0
+fastapi==0.109.0
+pandas==2.1.4
+bs4==0.0.1
+beautifulsoup4==4.12.2
+uvicorn==0.25.0
+gunicorn==21.2.0
+uvloop==0.19.0
+httptools==0.6.1
+lxml==5.1.0
+html5lib==1.1
+numpy==1.24.4

@@ -1,21 +1,45 @@
-# Use an official Python runtime as a parent image
-FROM python:3
+FROM python:3.11
 
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+# Creating base folder used by the application
+# And installing dependencies for google-chrome-stable
+RUN mkdir /app \
+    && apt-get update \
+    && apt-get install -y \
+        fonts-liberation \
+        libasound2 \
+        libatk-bridge2.0-0 \
+        libatk1.0-0 \
+        libatspi2.0-0 \
+        libcups2 \
+        libdbus-1-3 \
+        libdrm2 \
+        libgbm1 \
+        libgtk-3-0 \
+        libnspr4 \
+        libnss3 \
+        libx11-xcb1 \
+        libxcb-dri3-0 \
+        libxcomposite1 \
+        libxdamage1 \
+        libxfixes3 \
+        libxrandr2 \
+        xdg-utils \
+        libgdk-pixbuf2.0-0 \
+        libvulkan1 \
+        libu2f-udev
 
-# Create and set the working directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# Copy the requirements file into the container
-COPY requirements.txt .
+EXPOSE 8080
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt /app/
+COPY driver/chrome_114.0.5735.110_amd64.deb /app/driver/
+COPY driver/chromedriver /app/driver/
 
-# Copy the contents of the local directory into the container
-COPY . /usr/src/app
+RUN pip install -r requirements.txt --upgrade
+RUN dpkg -i driver/chrome_114.0.5735.110_amd64.deb
+RUN chmod a+x driver/chromedriver
 
-# Sstart the development server
-CMD ["python", "app/manage.py", "runserver", "0.0.0.0:8000"]
+COPY api/ /app/api/
+
+ENTRYPOINT ["gunicorn", "--bind=0.0.0.0:8000", "--workers=1", "--worker-class=uvicorn.workers.UvicornWorker", "api.main:app"]

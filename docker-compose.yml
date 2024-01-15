@@ -1,15 +1,11 @@
-version: '3'
+version: "3.8"
 
 services:
   web:
     build:
-      context: .
+      context: ./
       dockerfile: Dockerfile
+    container_name: cfo_crawler
+    restart: always
     ports:
       - "8000:8000"
-    depends_on:
-      - selenium
-  selenium:
-    image: selenium/standalone-chrome:latest
-    ports:
-      - "4444:4444"
