@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from api.models.unimedModel import Dentista, DentistaUpdate
+from api.repositories.unimedRepository import UnimedRepository
 
 load_dotenv()
 
@@ -27,11 +28,10 @@ def get_dentistas_from_unimed_odonto():
     #     782, 781, 783, 793, 780,
     # ]
 
-    planos_unimed = [804, 453]
+    planos_unimed = [804]
 
     points = [
-        (-25.530635, -48.529835),
-        (-96.530635, -78.529835)
+        (-25.530635, -48.529835)
     ]
 
     urls_crawled = []
@@ -76,7 +76,8 @@ def get_dentistas_from_unimed_odonto():
                         # print(json.dumps(dentista, indent=3))
                         teste = Dentista(**dentista)
                         print(teste)
-                        break
+                        UnimedRepository.insert_one(teste.model_dump(exclude={'id'}))
+                        exit
 
                     urls_crawled.append(url_search)
 
@@ -88,6 +89,21 @@ def get_dentistas_from_unimed_odonto():
     except Exception as e:
         print(e)
 
+def get_dentistas_unimed():
+    dentistas = UnimedRepository.find_dentistas()
+    return {
+        'status': True,
+        'count': len(list(dentistas)),
+        'data': list(dentistas)
+    }
+
+def get_dentista_unimed(cro_num, cro_uf):
+    dentistas = UnimedRepository.find_dentista(cro_num, cro_uf)
+    return {
+        'status': True,
+        'count': len(list(dentistas)),
+        'data': list(dentistas)
+    }
 
 def get_data(origin):
     if origin == 'local':

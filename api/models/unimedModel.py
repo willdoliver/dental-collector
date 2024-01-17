@@ -24,6 +24,7 @@ class Dentista(BaseModel):
     data_atualizacao: str | None = Field(alias="dataAtualizacao")
 
     class Config:
+        str_strip_whitespace = True
         populate_by_name = True
         json_schema_extra = {
             "example": {
@@ -73,6 +74,7 @@ class DentistaUpdate(BaseModel):
     # dataAtualizacao: Optional[dict]
 
     class Config:
+        str_strip_whitespace = True
         json_schema_extra = {
             "example": {
                 "_id": "066de609-b04a-4b30-b46c-32537c7f1f6e",

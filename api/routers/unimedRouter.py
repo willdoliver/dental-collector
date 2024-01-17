@@ -14,11 +14,11 @@ router = APIRouter(
 
 @router.get("/get_dentistas/")
 async def get_dentistas():
-    return [{"username": "Rick"}, {"username": "Morty"}]
+    return get_dentistas_unimed()
 
-@router.get("/get_dentista/")
-async def get_dentista():
-    return [{"username": "Rick"}]
+@router.get("/get_dentista/{cro_num}/{cro_uf}")
+async def get_dentista(cro_num, cro_uf):
+    return get_dentista_unimed(cro_num, cro_uf)
 
 @router.get("/find_dentistas")
 async def find_dentistas():
