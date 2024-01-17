@@ -1,0 +1,4409 @@
+{
+  "data": {
+    "resultadosCidadesProximas": false,
+    "paginaAtual": "1",
+    "quantidadePaginas": "3",
+    "list": [
+      {
+        "nome": "TAYSE INACIO FARIAS",
+        "cro": "26996",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "07168737961",
+        "razaoSocial": "RENATA HIGAKI YENDO ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "110927184",
+        "vinculacaoNome": "RENATA HIGAKI YENDO ODONTOLOGIA LTDA",
+        "vinculacaoRazaoSocial": "RENATA HIGAKI YENDO ODONTOLOGIA LTDA",
+        "vinculacaoCnpj": "8809115000133",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA JOÃO ÂNGELO CORDEIRO, 879 CEP 83005570",
+              "bairro": "SÃO PEDRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.54394730",
+              "longitude": "-49.19776570",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "32828487", "ramal": null },
+              { "ddd": "41", "numero": "97848085", "ramal": null }
+            ],
+            "email": "ODONTOCLINICA_SAOJOSE@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-12-26T19:33:38.561+0000"
+      },
+      {
+        "nome": "THAYSE DA SILVA ARCENIO",
+        "cro": "28838",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "06587715907",
+        "razaoSocial": "CONSULTORIO ODONTOLOGICO MATHIAS PEDROSO",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "100657176",
+        "vinculacaoNome": "BELLEDENT ODONTOLOGIA",
+        "vinculacaoRazaoSocial": "CONSULTORIO ODONTOLOGICO MATHIAS PEDROSO",
+        "vinculacaoCnpj": "9425282000143",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R ANNE FRANK, 983 CEP 81610020",
+              "bairro": "HAUER",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.47532250",
+              "longitude": "-49.24876510",
+              "distancia": "72"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "33764946", "ramal": null },
+              { "ddd": "41", "numero": "30594945", "ramal": null }
+            ],
+            "email": "ODONTOVITALEDENT@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2022-05-02T19:33:38.561+0000"
+      },
+      {
+        "nome": "GIOVANA MARIN LOPES",
+        "cro": "28218",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "09684064918",
+        "razaoSocial": "ORAL GOLD CONSULTORIO ODONTOLOGICO LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "122042298",
+        "vinculacaoNome": "ORAL GOLD CONSULTORIO ODONTOLOGICO",
+        "vinculacaoRazaoSocial": "ORAL GOLD CONSULTORIO ODONTOLOGICO LTDA",
+        "vinculacaoCnpj": "33530722000107",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA OURIZONA, 2645 CEP 81925360",
+              "bairro": "SÍTIO CERCADO",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.53885550",
+              "longitude": "-49.25537990",
+              "distancia": "72"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "30798499", "ramal": null },
+              { "ddd": "41", "numero": "999993718", "ramal": null }
+            ],
+            "email": "ORALGOLD.CLINICA@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2022-04-29T19:33:38.561+0000"
+      },
+      {
+        "nome": "KAREN RAYSSA TORRES DE LIMA",
+        "cro": "28031",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "00859654214",
+        "razaoSocial": "JRA ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "109417224",
+        "vinculacaoNome": "JRA ODONTOLOGIA LTDA",
+        "vinculacaoRazaoSocial": "JRA ODONTOLOGIA LTDA",
+        "vinculacaoCnpj": "32740224000126",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA MENDES LEITÃO, 2590 SALA 02 CEP 83005150",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.53711540",
+              "longitude": "-49.20474010",
+              "distancia": "67"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "33838025", "ramal": null },
+              { "ddd": "41", "numero": "996011211", "ramal": null }
+            ],
+            "email": "ANGELAPOLETO@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-10-02T19:33:38.561+0000"
+      },
+      {
+        "nome": "ELEANE MARIA NASCIMENTO",
+        "cro": "3383",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "25372335904",
+        "razaoSocial": "CLINILUX CLINICA ODONTOLOGICA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "100302112",
+        "vinculacaoNome": "CLINILUX CLINICA ODONTOLOGICA LTDA",
+        "vinculacaoRazaoSocial": "CLINILUX CLINICA ODONTOLOGICA LTDA",
+        "vinculacaoCnpj": "4304354000180",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R JOSÉ DE OLIVEIRA FRANCO, 1416 CEP 82820110",
+              "bairro": "BAIRRO ALTO",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.41113010",
+              "longitude": "-49.20717880",
+              "distancia": "69"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "33674141", "ramal": null }],
+            "email": "CLINILUX@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": null
+      },
+      {
+        "nome": "CHRISTIAN DENIS HEIDEN",
+        "cro": "10308",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "93934807968",
+        "razaoSocial": "CONSULTORIO ODONTOLOGICO HEIDEN LTDA - ME",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "101567294",
+        "vinculacaoNome": "CONSULTORIO ODONTOLOGICO HEIDEN LTDA - ME",
+        "vinculacaoRazaoSocial": "CONSULTORIO ODONTOLOGICO HEIDEN LTDA - ME",
+        "vinculacaoCnpj": "5751295000151",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA LUIZ FRANÇA, 746 CONJUNTO 08 CEP 82900250",
+              "bairro": "CAJURU",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.44582150",
+              "longitude": "-49.22357330",
+              "distancia": "70"
+            },
+            "areasAtuacao": null,
+            "telefone": [{ "ddd": "41", "numero": "32661101", "ramal": null }],
+            "email": "CPHEIDEN@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2016-06-21T19:33:38.561+0000"
+      },
+      {
+        "nome": "RAFAEL RUDIMAR HOLLER PERES",
+        "cro": "24310",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "06613119962",
+        "razaoSocial": "RAFAEL RUDIMAR HOLLER PERES",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": true,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA FRANCISCO DEROSSO, 3480 CEP 81830285",
+              "bairro": "XAXIM",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.51861530",
+              "longitude": "-49.25547420",
+              "distancia": "72"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": "9",
+                "descricaoAreaAtuacao": "ORTODONTIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "32058700", "ramal": null },
+              { "ddd": "41", "numero": "995550399", "ramal": null }
+            ],
+            "email": "RAFAELKMH@MSN.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-07-15T19:33:38.561+0000"
+      },
+      {
+        "nome": "SIMONE SAKUMA HIROSHI",
+        "cro": "10190",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "02034515978",
+        "razaoSocial": "CRISTIANE DE QUADROS CALEGARIO TRANCHO",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "115422188",
+        "vinculacaoNome": "ODONTOCLASS",
+        "vinculacaoRazaoSocial": "CRISTIANE DE QUADROS CALEGARIO TRANCHO",
+        "vinculacaoCnpj": "5552289000175",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA COLOMBO, 1775 CEP 83005400",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.53625030",
+              "longitude": "-49.19643570",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [{ "ddd": "41", "numero": "30351794", "ramal": null }],
+            "email": "CRISTIANE-ODONTO@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2023-03-07T19:33:38.561+0000"
+      },
+      {
+        "nome": "ORAL GOLD CONSULTORIO ODONTOLOGICO",
+        "cro": "26208",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "33530722000107",
+        "razaoSocial": "ORAL GOLD CONSULTORIO ODONTOLOGICO LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": true,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA OURIZONA, 2645 CEP 81925360",
+              "bairro": "SÍTIO CERCADO",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.53885550",
+              "longitude": "-49.25537990",
+              "distancia": "72"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CIRURGIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ORTODONTIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "30798499", "ramal": null },
+              { "ddd": "41", "numero": "999993718", "ramal": null }
+            ],
+            "email": "ORALGOLD.CLINICA@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2022-04-29T19:33:38.561+0000"
+      },
+      {
+        "nome": "PRISCILLA MARA CARVALHO",
+        "cro": "25520",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "08822267974",
+        "razaoSocial": "AK ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "112092187",
+        "vinculacaoNome": "AK SORRISO ODONTOLOGIA ESPECIALIZADA",
+        "vinculacaoRazaoSocial": "AK ODONTOLOGIA LTDA",
+        "vinculacaoCnpj": "18526846000125",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA DESEMBARGADOR HUGO SIMAS, 141 CEP 83203250",
+              "bairro": "CENTRO HISTÓRICO",
+              "cidade": "PARANAGUÁ",
+              "uf": "PR",
+              "latitude": "-25.51972450",
+              "longitude": "-48.50743560",
+              "distancia": "2"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "34259911", "ramal": null },
+              { "ddd": "41", "numero": "991019911", "ramal": null }
+            ],
+            "email": "AKSORRISO@OUTLOOK.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2020-03-06T19:33:38.561+0000"
+      },
+      {
+        "nome": "JOYSSE KREUSCH GASPAR",
+        "cro": "22966",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "07122011909",
+        "razaoSocial": "INTERSAUDE ODONTOLOGIA & PSICOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "105547239",
+        "vinculacaoNome": "INTERSAUDE ODONTOLOGIA & PSICOLOGIA LTDA",
+        "vinculacaoRazaoSocial": "INTERSAUDE ODONTOLOGIA & PSICOLOGIA LTDA",
+        "vinculacaoCnpj": "7701476000107",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA ISAQUE RODRIGUES DA SILVA, 28 CEP 83420000",
+              "bairro": "CENTRO",
+              "cidade": "QUATRO BARRAS",
+              "uf": "PR",
+              "latitude": "-25.37062270",
+              "longitude": "-49.07932460",
+              "distancia": "57"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "36723422", "ramal": null },
+              { "ddd": "41", "numero": "36722700", "ramal": null }
+            ],
+            "email": "CLINICAINTERSAUDE@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2018-09-27T19:33:38.561+0000"
+      },
+      {
+        "nome": "JRA ODONTOLOGIA LTDA",
+        "cro": "26614",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "32740224000126",
+        "razaoSocial": "JRA ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA MENDES LEITÃO, 2590 SALA 02 CEP 83005150",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.53711540",
+              "longitude": "-49.20474010",
+              "distancia": "67"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "33838025", "ramal": null },
+              { "ddd": "41", "numero": "996011211", "ramal": null }
+            ],
+            "email": "ANGELAPOLETO@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2020-05-05T19:33:38.561+0000"
+      },
+      {
+        "nome": "THICIANI COSTA",
+        "cro": "21797",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "06635227903",
+        "razaoSocial": "THICIANI COSTA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": true,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "AVENIDA PREFEITO JOÃO BATISTA STOCCO, 57 SALA 2 CEP 83407000",
+              "bairro": "GUARAITUBA",
+              "cidade": "COLOMBO",
+              "uf": "PR",
+              "latitude": "-25.34988490",
+              "longitude": "-49.17823250",
+              "distancia": "68"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ODONTOGERIATRIA"
+              },
+              {
+                "codigoQualificacao": "9",
+                "descricaoAreaAtuacao": "ORTODONTIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "35623620", "ramal": null },
+              { "ddd": "41", "numero": "995657720", "ramal": null }
+            ],
+            "email": "THICIANICOSTA@YAHOO.COM.BR",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-06-24T19:33:38.561+0000"
+      },
+      {
+        "nome": "SERRA DO MAR",
+        "cro": "11587",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "04476236000150",
+        "razaoSocial": "CLINICA ODONTOLOGICA SERRA DO MAR LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA MANOEL BONIFÁCIO, 266 CEP 83203150",
+              "bairro": "CENTRO HISTÓRICO",
+              "cidade": "PARANAGUÁ",
+              "uf": "PR",
+              "latitude": "-25.515845",
+              "longitude": "-48.503623",
+              "distancia": "3"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ENDODONTIA"
+              },
+              { "codigoQualificacao": null, "descricaoAreaAtuacao": "PRÓTESE" }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "34241414", "ramal": null },
+              { "ddd": "41", "numero": "34253291", "ramal": null }
+            ],
+            "email": "DRCLAYTON@ODONTOFLEXPLAN.COM.BR",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-11-26T19:33:38.561+0000"
+      },
+      {
+        "nome": "LUCAS DE CARLI SANTOS",
+        "cro": "28927",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "05257134926",
+        "razaoSocial": "LUCAS DE CARLI SANTOS",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": true,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA MAESTRO CARLOS FRANK, 2250 LOJA 07 CEP 81750400",
+              "bairro": "BOQUEIRÃO",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.52133910",
+              "longitude": "-49.23904840",
+              "distancia": "71"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CIRURGIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ENDODONTIA"
+              },
+              {
+                "codigoQualificacao": "9",
+                "descricaoAreaAtuacao": "ORTODONTIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "PERIODONTIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "996614546", "ramal": null },
+              { "ddd": "41", "numero": "37794546", "ramal": null }
+            ],
+            "email": "CURITIBA.BOQUEIRAO@REDEORTO.COM.BR",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2022-12-07T19:33:38.561+0000"
+      },
+      {
+        "nome": "ARTHUR ORLANDO KLAS NETO",
+        "cro": "14759",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "02938748914",
+        "razaoSocial": "ORTOPINHAIS CLINICA ODONTOLOGICA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "4423875",
+        "vinculacaoNome": "POLICLINICA ORTOPINHAIS",
+        "vinculacaoRazaoSocial": "ORTOPINHAIS CLINICA ODONTOLOGICA",
+        "vinculacaoCnpj": "7053270000100",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "AV JACOB MACANHAN, 273 CEP 83324510",
+              "bairro": "CENTRO",
+              "cidade": "PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.430287",
+              "longitude": "-49.18384670",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "35572845", "ramal": null },
+              { "ddd": "41", "numero": "998820037", "ramal": null }
+            ],
+            "email": "JAQUELINEMILLEO@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2020-10-09T19:33:38.561+0000"
+      },
+      {
+        "nome": "ELAINE CAROLINE DOS SANTOS MOURA",
+        "cro": "32035",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "04403539980",
+        "razaoSocial": "ELAINE CAROLINE DOS SANTOS MOURA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "AVENIDA DA INTEGRAÇÃO, 798 LOJA 03 CEP 82840290",
+              "bairro": "BAIRRO ALTO",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.40939090",
+              "longitude": "-49.21371550",
+              "distancia": "69"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ENDODONTIA"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "988576772", "ramal": null }],
+            "email": "DRAELAINECMOURA@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2022-04-27T19:33:38.561+0000"
+      },
+      {
+        "nome": "POLICLINICA ORTOPINHAIS",
+        "cro": "1420",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "07053270000100",
+        "razaoSocial": "ORTOPINHAIS CLINICA ODONTOLOGICA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": true,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "AV JACOB MACANHAN, 273 CEP 83324510",
+              "bairro": "CENTRO",
+              "cidade": "PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.430287",
+              "longitude": "-49.18384670",
+              "distancia": "66"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ORTODONTIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "35572845", "ramal": null },
+              { "ddd": "41", "numero": "998820037", "ramal": null }
+            ],
+            "email": "JAQUELINEMILLEO@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": null
+      },
+      {
+        "nome": "GABRIELA DA SILVA NACER MAREK",
+        "cro": "27843",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "02879540135",
+        "razaoSocial": "GABRIELA DA SILVA NACER MAREK",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA DOUTOR MARCELINO NOGUEIRA, 580 SALA 24 CEP 83005370",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.53812020",
+              "longitude": "-49.19792680",
+              "distancia": "66"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "30584158", "ramal": null },
+              { "ddd": "41", "numero": "988953034", "ramal": null }
+            ],
+            "email": "GABI.NACER@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2020-08-05T19:33:38.561+0000"
+      },
+      {
+        "nome": "GLAUCIA BBARBOSA CALDEIRA DIAS",
+        "cro": "15594",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "90772377634",
+        "razaoSocial": "CONSULTORIO ODONTOLOGICO HEIDEN",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "101107129",
+        "vinculacaoNome": "ODONTO PREMIUM",
+        "vinculacaoRazaoSocial": "CONSULTORIO ODONTOLOGICO HEIDEN",
+        "vinculacaoCnpj": "5751295000232",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R ALMIRANTE ALEXANDRINO, 1573 SOBRELOJA CEP 83040420",
+              "bairro": "AFONSO PENA",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.50765920",
+              "longitude": "-49.183648",
+              "distancia": "65"
+            },
+            "areasAtuacao": null,
+            "telefone": [{ "ddd": "41", "numero": "30533030", "ramal": null }],
+            "email": "ODONTOPREMIUMSJP@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2016-02-29T19:33:38.561+0000"
+      },
+      {
+        "nome": "ANA CLARA BEHNKE",
+        "cro": "29623 ",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "08762743945",
+        "razaoSocial": "ORTO STUDIO ODONTOLOGIA EIRELI ",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": null,
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "131462229",
+        "vinculacaoNome": "ORTO STUDIO",
+        "vinculacaoRazaoSocial": "ORTO STUDIO ODONTOLOGIA EIRELI ",
+        "vinculacaoCnpj": "34127617000194",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA LEONARDO FRANCISCHELLI, 322 SOBRELOJA CEP 83430000",
+              "bairro": "JARDIM PAULISTA",
+              "cidade": "CAMPINA GRANDE DO SUL",
+              "uf": "PR",
+              "latitude": "-25.360645",
+              "longitude": "-49.10267330",
+              "distancia": "60"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "30169422", "ramal": null },
+              { "ddd": "41", "numero": "997511455", "ramal": null },
+              { "ddd": "41", "numero": "988377554", "ramal": null }
+            ],
+            "email": "CONTATO@ORTOSTUDIO.COM.BR",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2023-09-25T19:33:38.561+0000"
+      },
+      {
+        "nome": "STEFANY MIRELLI MACHADO",
+        "cro": "29768",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "09379255942",
+        "razaoSocial": "FAVATO ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "112897215",
+        "vinculacaoNome": "CONSULTORIO ODONTOLOGICO DR JESSICA C. FAVATO",
+        "vinculacaoRazaoSocial": "FAVATO ODONTOLOGIA LTDA",
+        "vinculacaoCnpj": "34893278000157",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "ALCÍDIO VIANA, 837 SALA 502 5 ANDAR CEP 83005560",
+              "bairro": "SÃO PEDRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.54192180",
+              "longitude": "-49.19491840",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "30813167", "ramal": null },
+              { "ddd": "41", "numero": "999800292", "ramal": null }
+            ],
+            "email": "FAVATOODONTOLOGIA@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2023-07-20T19:33:38.561+0000"
+      },
+      {
+        "nome": "CONSULTORIO ODONTOLOGICO DR JESSICA C. FAVATO",
+        "cro": "22982",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "34893278000157",
+        "razaoSocial": "FAVATO ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": true,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "ALCÍDIO VIANA, 837 SALA 502 5 ANDAR CEP 83005560",
+              "bairro": "SÃO PEDRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.54192180",
+              "longitude": "-49.19491840",
+              "distancia": "66"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ENDODONTIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ORTODONTIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "30813167", "ramal": null },
+              { "ddd": "41", "numero": "999800292", "ramal": null }
+            ],
+            "email": "FAVATOODONTOLOGIA@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2020-05-12T19:33:38.561+0000"
+      },
+      {
+        "nome": "CLAYTON KINDI HASHIMOTO",
+        "cro": "11587",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "01677523913",
+        "razaoSocial": "CLINICA ODONTOLOGICA SERRA DO MAR LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "110367189",
+        "vinculacaoNome": "SERRA DO MAR",
+        "vinculacaoRazaoSocial": "CLINICA ODONTOLOGICA SERRA DO MAR LTDA",
+        "vinculacaoCnpj": "4476236000150",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA MANOEL BONIFÁCIO, 266 CEP 83203150",
+              "bairro": "CENTRO HISTÓRICO",
+              "cidade": "PARANAGUÁ",
+              "uf": "PR",
+              "latitude": "-25.515845",
+              "longitude": "-48.503623",
+              "distancia": "3"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "34241414", "ramal": null },
+              { "ddd": "41", "numero": "34253291", "ramal": null }
+            ],
+            "email": "DRCLAYTON@ODONTOFLEXPLAN.COM.BR",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-11-26T19:33:38.561+0000"
+      },
+      {
+        "nome": "KEILLY FAVA DOMINGUES",
+        "cro": "21218",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "05895351964",
+        "razaoSocial": "AK ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "112092187",
+        "vinculacaoNome": "AK SORRISO ODONTOLOGIA ESPECIALIZADA",
+        "vinculacaoRazaoSocial": "AK ODONTOLOGIA LTDA",
+        "vinculacaoCnpj": "18526846000125",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA DESEMBARGADOR HUGO SIMAS, 141 CEP 83203250",
+              "bairro": "CENTRO HISTÓRICO",
+              "cidade": "PARANAGUÁ",
+              "uf": "PR",
+              "latitude": "-25.51972450",
+              "longitude": "-48.50743560",
+              "distancia": "2"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "34259911", "ramal": null },
+              { "ddd": "41", "numero": "991019911", "ramal": null }
+            ],
+            "email": "AKSORRISO@OUTLOOK.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2020-03-06T19:33:38.561+0000"
+      },
+      {
+        "nome": "VANESSA LUZZI",
+        "cro": "24426",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "08505655966",
+        "razaoSocial": "VANESSA LUZZI",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": true,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA ALBERICO FLORES BUENO, 394 CEP 82840170",
+              "bairro": "BAIRRO ALTO",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.39721670",
+              "longitude": "-49.208583",
+              "distancia": "69"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": "9",
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "996697586", "ramal": null }],
+            "email": "ODONTOCLAIRE@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2022-03-25T19:33:38.561+0000"
+      },
+      {
+        "nome": "STARDENT",
+        "cro": "18181",
+        "ufCro": "RR",
+        "codigoPrestador": null,
+        "cpfCnpj": "08382914000176",
+        "razaoSocial": "CLINICA ODONTOLOGICA STARDENT LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R IZABEL A REDENTORA, 2188 SOBRE LOJA CEP 83005010",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.54048860",
+              "longitude": "-49.197589",
+              "distancia": "66"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "32826808", "ramal": null },
+              { "ddd": "41", "numero": "33856684", "ramal": null }
+            ],
+            "email": "CLINICASTARDENT@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2021-06-10T19:33:38.561+0000"
+      },
+      {
+        "nome": "ELAINE PEIXOTO MENDES - CLINICA ODONTOLOGICA - ME",
+        "cro": "23051",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "25970311000104",
+        "razaoSocial": "ELAINE PEIXOTO MENDES - CLINICA ODONTOLOGICA - ME",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "MARCELINO NOGUEIRA, 214 CEP 82510270",
+              "bairro": "BACACHERI",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.39740630",
+              "longitude": "-49.23756430",
+              "distancia": "72"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CIRURGIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ENDODONTIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "PERIODONTIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "32568662", "ramal": null },
+              { "ddd": "41", "numero": "987890446", "ramal": null }
+            ],
+            "email": "CLINICAMENDES.CTBA@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2017-12-21T19:33:38.561+0000"
+      },
+      {
+        "nome": "RADIODONTO PINHAIS",
+        "cro": "7618",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "13483757000125",
+        "razaoSocial": "RADIODONTO PINHAIS EIRELI",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "RADIOLOGIA ODONTOLÓGICA ",
+        "website": null,
+        "especialista": true,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "JACOB MACANHAN, 274 SALA 03 CEP 83320352",
+              "bairro": "CENTRO",
+              "cidade": "PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.43106140",
+              "longitude": "-49.18356250",
+              "distancia": "66"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "RADIOLOGIA"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "36534752", "ramal": null }],
+            "email": "RADIODONTOPINHAIS@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2022-11-09T19:33:38.561+0000"
+      },
+      {
+        "nome": "JULIA ZAWADZKI TRINDADE",
+        "cro": "28962",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "07347604931",
+        "razaoSocial": "BIHAIKO E TRINDADE SERVICOS ODONTOLOGICOS",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "122447190",
+        "vinculacaoNome": "B T ODONTOLOGIA",
+        "vinculacaoRazaoSocial": "BIHAIKO E TRINDADE SERVICOS ODONTOLOGICOS",
+        "vinculacaoCnpj": "39554576000136",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA CORONEL JOÃO DA SILVA SAMPAIO, 100 CASA 03 CEP 80210220",
+              "bairro": "JARDIM BOTÂNICO",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.44134310",
+              "longitude": "-49.24817140",
+              "distancia": "72"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "30777098", "ramal": null },
+              { "ddd": "41", "numero": "999609055", "ramal": null }
+            ],
+            "email": "GTTB.ODONTO@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2022-07-04T19:33:38.561+0000"
+      },
+      {
+        "nome": "THIAGO SOUZA DE LIMA",
+        "cro": "23408",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "07086816973",
+        "razaoSocial": "THIAGO SOUZA DE LIMA - ALFANDA CLINICA ODONTOLOGICA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "106487183",
+        "vinculacaoNome": "CLINICA ODONTOLOGICA ALFANDA",
+        "vinculacaoRazaoSocial": "THIAGO SOUZA DE LIMA - ALFANDA CLINICA ODONTOLOGICA",
+        "vinculacaoCnpj": "24923639000107",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "TELÊMACO BORBA, 98 CEP 83410590",
+              "bairro": "GUARAITUBA",
+              "cidade": "COLOMBO",
+              "uf": "PR",
+              "latitude": "-25.35016450",
+              "longitude": "-49.165227",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [{ "ddd": "41", "numero": "36668279", "ramal": null }],
+            "email": "ALFANDAODONTOLOGIA@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-02-05T19:33:38.561+0000"
+      },
+      {
+        "nome": "MARIA FERNANDA DORL BIHAIKO",
+        "cro": "31350",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "10861023986",
+        "razaoSocial": "BIHAIKO E TRINDADE SERVICOS ODONTOLOGICOS",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "122447190",
+        "vinculacaoNome": "B T ODONTOLOGIA",
+        "vinculacaoRazaoSocial": "BIHAIKO E TRINDADE SERVICOS ODONTOLOGICOS",
+        "vinculacaoCnpj": "39554576000136",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA CORONEL JOÃO DA SILVA SAMPAIO, 100 CASA 03 CEP 80210220",
+              "bairro": "JARDIM BOTÂNICO",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.44134310",
+              "longitude": "-49.24817140",
+              "distancia": "72"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "30777098", "ramal": null },
+              { "ddd": "41", "numero": "999609055", "ramal": null }
+            ],
+            "email": "GTTB.ODONTO@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2022-07-04T19:33:38.561+0000"
+      },
+      {
+        "nome": "VALERIA ELISA NASCIMENTO",
+        "cro": "21213",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "03679016921",
+        "razaoSocial": "CLINILUX CLINICA ODONTOLOGICA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "100302112",
+        "vinculacaoNome": "CLINILUX CLINICA ODONTOLOGICA LTDA",
+        "vinculacaoRazaoSocial": "CLINILUX CLINICA ODONTOLOGICA LTDA",
+        "vinculacaoCnpj": "4304354000180",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R JOSÉ DE OLIVEIRA FRANCO, 1416 CEP 82820110",
+              "bairro": "BAIRRO ALTO",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.41113010",
+              "longitude": "-49.20717880",
+              "distancia": "69"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "33674141", "ramal": null }],
+            "email": "CLINILUX@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": null
+      },
+      {
+        "nome": "ELAINE PEIXOTO MENDES",
+        "cro": "23051",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "05880535975",
+        "razaoSocial": "ELAINE PEIXOTO MENDES - CLINICA ODONTOLOGICA - ME",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "103587136",
+        "vinculacaoNome": "ELAINE PEIXOTO MENDES - CLINICA ODONTOLOGICA - ME",
+        "vinculacaoRazaoSocial": "ELAINE PEIXOTO MENDES - CLINICA ODONTOLOGICA - ME",
+        "vinculacaoCnpj": "25970311000104",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "MARCELINO NOGUEIRA, 214 CEP 82510270",
+              "bairro": "BACACHERI",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.39740630",
+              "longitude": "-49.23756430",
+              "distancia": "72"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CIRURGIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ENDODONTIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "PERIODONTIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "32568662", "ramal": null },
+              { "ddd": "41", "numero": "987890446", "ramal": null }
+            ],
+            "email": "CLINICAMENDES.CTBA@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2017-12-21T19:33:38.561+0000"
+      },
+      {
+        "nome": "SAMANTA CAMBRUSSI",
+        "cro": "34552",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "00450961044",
+        "razaoSocial": "FAVATO ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "112897215",
+        "vinculacaoNome": "CONSULTORIO ODONTOLOGICO DR JESSICA C. FAVATO",
+        "vinculacaoRazaoSocial": "FAVATO ODONTOLOGIA LTDA",
+        "vinculacaoCnpj": "34893278000157",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "ALCÍDIO VIANA, 837 SALA 502 5 ANDAR CEP 83005560",
+              "bairro": "SÃO PEDRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.54192180",
+              "longitude": "-49.19491840",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "30813167", "ramal": null },
+              { "ddd": "41", "numero": "999800292", "ramal": null }
+            ],
+            "email": "FAVATOODONTOLOGIA@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2023-06-26T19:33:38.561+0000"
+      },
+      {
+        "nome": "TAYLA SABRINA DE OLIVEIRA PINTO",
+        "cro": "27378",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "09819254990",
+        "razaoSocial": "TAYLA SABRINA DE OLIVEIRA PINTO",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA MARECHAL DEODORO DA FONSECA, 600 SALA 01 CEP 83005350",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.53916530",
+              "longitude": "-49.200811",
+              "distancia": "67"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "31463262", "ramal": null },
+              { "ddd": "41", "numero": "996406867", "ramal": null }
+            ],
+            "email": "TAYLASABRINA@YAHOO.COM.BR",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-07-04T19:33:38.561+0000"
+      },
+      {
+        "nome": "CLINICA ODONTOLOGICA ALFANDA",
+        "cro": "23408",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "24923639000107",
+        "razaoSocial": "THIAGO SOUZA DE LIMA - ALFANDA CLINICA ODONTOLOGICA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "TELÊMACO BORBA, 98 CEP 83410590",
+              "bairro": "GUARAITUBA",
+              "cidade": "COLOMBO",
+              "uf": "PR",
+              "latitude": "-25.35016450",
+              "longitude": "-49.165227",
+              "distancia": "66"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "36668279", "ramal": null }],
+            "email": "ALFANDAODONTOLOGIA@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-02-05T19:33:38.561+0000"
+      },
+      {
+        "nome": "GLAUCIA TAZIMA",
+        "cro": "20170",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "05196203990",
+        "razaoSocial": "CRISTIANE DE QUADROS CALEGARIO TRANCHO",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "115422188",
+        "vinculacaoNome": "ODONTOCLASS",
+        "vinculacaoRazaoSocial": "CRISTIANE DE QUADROS CALEGARIO TRANCHO",
+        "vinculacaoCnpj": "5552289000175",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA COLOMBO, 1775 CEP 83005400",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.53625030",
+              "longitude": "-49.19643570",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [{ "ddd": "41", "numero": "30351794", "ramal": null }],
+            "email": "CRISTIANE-ODONTO@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2023-03-07T19:33:38.561+0000"
+      },
+      {
+        "nome": "B T ODONTOLOGIA",
+        "cro": "28962",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "39554576000136",
+        "razaoSocial": "BIHAIKO E TRINDADE SERVICOS ODONTOLOGICOS",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA CORONEL JOÃO DA SILVA SAMPAIO, 100 CASA 03 CEP 80210220",
+              "bairro": "JARDIM BOTÂNICO",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.44134310",
+              "longitude": "-49.24817140",
+              "distancia": "72"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "PERIODONTIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "30777098", "ramal": null },
+              { "ddd": "41", "numero": "999609055", "ramal": null }
+            ],
+            "email": "GTTB.ODONTO@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2022-07-04T19:33:38.561+0000"
+      },
+      {
+        "nome": "RENATA HIGAKI YENDO ODONTOLOGIA LTDA",
+        "cro": "11319",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "08809115000133",
+        "razaoSocial": "RENATA HIGAKI YENDO ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": true,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA JOÃO ÂNGELO CORDEIRO, 879 CEP 83005570",
+              "bairro": "SÃO PEDRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.54394730",
+              "longitude": "-49.19776570",
+              "distancia": "66"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ENDODONTIA"
+              },
+              {
+                "codigoQualificacao": "9",
+                "descricaoAreaAtuacao": "ORTODONTIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "32828487", "ramal": null },
+              { "ddd": "41", "numero": "97848085", "ramal": null }
+            ],
+            "email": "ODONTOCLINICA_SAOJOSE@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-12-26T19:33:38.561+0000"
+      },
+      {
+        "nome": "EMILIO CESAR AMARAL",
+        "cro": "15569",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "02978102942",
+        "razaoSocial": "ODONTO SAO CAMILO",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "100327265",
+        "vinculacaoNome": "CLINICA ODONTOLOGICA ECER LTDA ME",
+        "vinculacaoRazaoSocial": "ODONTO SAO CAMILO",
+        "vinculacaoCnpj": "5512980000125",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "AV CAMILO DI LELLIS, 348 SALA 113 CEP 83323000",
+              "bairro": "CENTRO",
+              "cidade": "PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.43724280",
+              "longitude": "-49.18619920",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "30330303", "ramal": null },
+              { "ddd": "41", "numero": "997882286", "ramal": null }
+            ],
+            "email": "EMILIOAMARAL@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2020-10-09T19:33:38.561+0000"
+      },
+      {
+        "nome": "MARIA ROSI ALMENDRA MEGER",
+        "cro": "6196",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "08776108864",
+        "razaoSocial": "MARIA ROSI ALMENDRA MEGER",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "MARECHAL FLORIANO PEIXOTO, 5559 CONJUNTO 6 CEP 81610000",
+              "bairro": "HAUER",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.47666760",
+              "longitude": "-49.24935880",
+              "distancia": "72"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CIRURGIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ODONTOGERIATRIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ODONTOPEDIATRIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "PACIENTES ESPECIAIS"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "PERIODONTIA"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "32786249", "ramal": null }],
+            "email": "MAYARA_MUDREK@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-04-12T19:33:38.561+0000"
+      },
+      {
+        "nome": "NOBRE SORRISO",
+        "cro": "26614",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "39465397000122",
+        "razaoSocial": "GABRIELA MARIA FEDIUK ATIVIDADES ODONTOLOGICAS LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA MENDES LEITÃO, 2569 CEP 83005150",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.53708890",
+              "longitude": "-49.20449340",
+              "distancia": "67"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ODONTOPEDIATRIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "35883730", "ramal": null },
+              { "ddd": "41", "numero": "988208544", "ramal": null }
+            ],
+            "email": "GABRIELA.FEDIUK@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2021-10-19T19:33:38.561+0000"
+      },
+      {
+        "nome": "GC ODONTOLOGIA",
+        "cro": "24564",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "48002651000147",
+        "razaoSocial": "GSC ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA PROFESSOR JOÃO SOARES BARCELOS, 1381 SALA 01  CEP 81630060",
+              "bairro": "HAUER",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.48575620",
+              "longitude": "-49.25182770",
+              "distancia": "72"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CIRURGIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "PERIODONTIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "30920944", "ramal": null },
+              { "ddd": "41", "numero": "997231828", "ramal": null }
+            ],
+            "email": "GCODONTOLOGIA7@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2022-12-20T19:33:38.561+0000"
+      },
+      {
+        "nome": "PATRICIA ALEXANDRINA DEZAN DA SILVA",
+        "cro": "21396",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "06615709910",
+        "razaoSocial": "CONSULTORIO ODONTOLOGICO MATHIAS PEDROSO",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "100657176",
+        "vinculacaoNome": "BELLEDENT ODONTOLOGIA",
+        "vinculacaoRazaoSocial": "CONSULTORIO ODONTOLOGICO MATHIAS PEDROSO",
+        "vinculacaoCnpj": "9425282000143",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R ANNE FRANK, 983 CEP 81610020",
+              "bairro": "HAUER",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.47532250",
+              "longitude": "-49.24876510",
+              "distancia": "72"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "33764946", "ramal": null },
+              { "ddd": "41", "numero": "30594945", "ramal": null }
+            ],
+            "email": "ODONTOVITALEDENT@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2015-07-06T19:33:38.561+0000"
+      },
+      {
+        "nome": "SILVIA MARIA FRIZZE",
+        "cro": "9349",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "09623158858",
+        "razaoSocial": "CRISTIANE DE QUADROS CALEGARIO TRANCHO",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "115422188",
+        "vinculacaoNome": "ODONTOCLASS",
+        "vinculacaoRazaoSocial": "CRISTIANE DE QUADROS CALEGARIO TRANCHO",
+        "vinculacaoCnpj": "5552289000175",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA COLOMBO, 1775 CEP 83005400",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.53625030",
+              "longitude": "-49.19643570",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [{ "ddd": "41", "numero": "30351794", "ramal": null }],
+            "email": "CRISTIANE-ODONTO@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2023-03-07T19:33:38.561+0000"
+      },
+      {
+        "nome": "MARYCLERIS PIETRAROTA HUMMEL",
+        "cro": "10927",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "56784171934",
+        "razaoSocial": "CLINICA ODONTOLOGICA SERRA DO MAR LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "110367189",
+        "vinculacaoNome": "SERRA DO MAR",
+        "vinculacaoRazaoSocial": "CLINICA ODONTOLOGICA SERRA DO MAR LTDA",
+        "vinculacaoCnpj": "4476236000150",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA MANOEL BONIFÁCIO, 266 CEP 83203150",
+              "bairro": "CENTRO HISTÓRICO",
+              "cidade": "PARANAGUÁ",
+              "uf": "PR",
+              "latitude": "-25.515845",
+              "longitude": "-48.503623",
+              "distancia": "3"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "34241414", "ramal": null },
+              { "ddd": "41", "numero": "34253291", "ramal": null }
+            ],
+            "email": "DRCLAYTON@ODONTOFLEXPLAN.COM.BR",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-11-26T19:33:38.561+0000"
+      },
+      {
+        "nome": "ORTO STUDIO",
+        "cro": "19836 ",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "34127617000194",
+        "razaoSocial": "ORTO STUDIO ODONTOLOGIA EIRELI ",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": null,
+        "website": null,
+        "especialista": true,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA LEONARDO FRANCISCHELLI, 322 SOBRELOJA CEP 83430000",
+              "bairro": "JARDIM PAULISTA",
+              "cidade": "CAMPINA GRANDE DO SUL",
+              "uf": "PR",
+              "latitude": "-25.360645",
+              "longitude": "-49.10267330",
+              "distancia": "60"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ENDODONTIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ORTODONTIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "30169422", "ramal": null },
+              { "ddd": "41", "numero": "997511455", "ramal": null },
+              { "ddd": "41", "numero": "988377554", "ramal": null }
+            ],
+            "email": "CONTATO@ORTOSTUDIO.COM.BR",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2023-09-25T19:33:38.561+0000"
+      },
+      {
+        "nome": "CLINILUX CLINICA ODONTOLOGICA LTDA",
+        "cro": "3383",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "04304354000180",
+        "razaoSocial": "CLINILUX CLINICA ODONTOLOGICA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R JOSÉ DE OLIVEIRA FRANCO, 1416 CEP 82820110",
+              "bairro": "BAIRRO ALTO",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.41113010",
+              "longitude": "-49.20717880",
+              "distancia": "69"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "33674141", "ramal": null }],
+            "email": "CLINILUX@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": null
+      },
+      {
+        "nome": "ELAINE PINHEIRO RICARDO HASHIMOTO",
+        "cro": "26050",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "04173027974",
+        "razaoSocial": "CLINICA ODONTOLOGICA SERRA DO MAR LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "110367189",
+        "vinculacaoNome": "SERRA DO MAR",
+        "vinculacaoRazaoSocial": "CLINICA ODONTOLOGICA SERRA DO MAR LTDA",
+        "vinculacaoCnpj": "4476236000150",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA MANOEL BONIFÁCIO, 266 CEP 83203150",
+              "bairro": "CENTRO HISTÓRICO",
+              "cidade": "PARANAGUÁ",
+              "uf": "PR",
+              "latitude": "-25.515845",
+              "longitude": "-48.503623",
+              "distancia": "3"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "34241414", "ramal": null },
+              { "ddd": "41", "numero": "34253291", "ramal": null }
+            ],
+            "email": "DRCLAYTON@ODONTOFLEXPLAN.COM.BR",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-11-26T19:33:38.561+0000"
+      },
+      {
+        "nome": "ALEX LANDUCCI",
+        "cro": "21408",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "05901407954",
+        "razaoSocial": "AK ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "112092187",
+        "vinculacaoNome": "AK SORRISO ODONTOLOGIA ESPECIALIZADA",
+        "vinculacaoRazaoSocial": "AK ODONTOLOGIA LTDA",
+        "vinculacaoCnpj": "18526846000125",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA DESEMBARGADOR HUGO SIMAS, 141 CEP 83203250",
+              "bairro": "CENTRO HISTÓRICO",
+              "cidade": "PARANAGUÁ",
+              "uf": "PR",
+              "latitude": "-25.51972450",
+              "longitude": "-48.50743560",
+              "distancia": "2"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "34259911", "ramal": null },
+              { "ddd": "41", "numero": "991019911", "ramal": null }
+            ],
+            "email": "AKSORRISO@OUTLOOK.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2020-03-06T19:33:38.561+0000"
+      },
+      {
+        "nome": "MAGALY SOYREL ZANIKOSKI COELHO",
+        "cro": "8111",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "85076430949",
+        "razaoSocial": "RENATA HIGAKI YENDO ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "110927184",
+        "vinculacaoNome": "RENATA HIGAKI YENDO ODONTOLOGIA LTDA",
+        "vinculacaoRazaoSocial": "RENATA HIGAKI YENDO ODONTOLOGIA LTDA",
+        "vinculacaoCnpj": "8809115000133",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA JOÃO ÂNGELO CORDEIRO, 879 CEP 83005570",
+              "bairro": "SÃO PEDRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.54394730",
+              "longitude": "-49.19776570",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "32828487", "ramal": null },
+              { "ddd": "41", "numero": "97848085", "ramal": null }
+            ],
+            "email": "ODONTOCLINICA_SAOJOSE@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-12-26T19:33:38.561+0000"
+      },
+      {
+        "nome": "CLINICA ODONTOLOGICA ECER LTDA ME",
+        "cro": "11246",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "05512980000125",
+        "razaoSocial": "ODONTO SAO CAMILO",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "AV CAMILO DI LELLIS, 348 SALA 113 CEP 83323000",
+              "bairro": "CENTRO",
+              "cidade": "PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.43724280",
+              "longitude": "-49.18619920",
+              "distancia": "66"
+            },
+            "areasAtuacao": [
+              { "codigoQualificacao": null, "descricaoAreaAtuacao": "CIRURGIA" }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "30330303", "ramal": null },
+              { "ddd": "41", "numero": "997882286", "ramal": null }
+            ],
+            "email": "EMILIOAMARAL@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2014-10-27T19:33:38.561+0000"
+      },
+      {
+        "nome": "CRISTINE WAHRHAFTIG",
+        "cro": "11689",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "02081825945",
+        "razaoSocial": "RENATA HIGAKI YENDO ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "110927184",
+        "vinculacaoNome": "RENATA HIGAKI YENDO ODONTOLOGIA LTDA",
+        "vinculacaoRazaoSocial": "RENATA HIGAKI YENDO ODONTOLOGIA LTDA",
+        "vinculacaoCnpj": "8809115000133",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA JOÃO ÂNGELO CORDEIRO, 879 CEP 83005570",
+              "bairro": "SÃO PEDRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.54394730",
+              "longitude": "-49.19776570",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "32828487", "ramal": null },
+              { "ddd": "41", "numero": "97848085", "ramal": null }
+            ],
+            "email": "ODONTOCLINICA_SAOJOSE@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-12-26T19:33:38.561+0000"
+      },
+      {
+        "nome": "SARAH ELISE CANTU OLIVEIRA SANTOS",
+        "cro": "30870",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "10817087940",
+        "razaoSocial": "CONSULTORIO ODONTOLOGICO MATHIAS PEDROSO",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "100657176",
+        "vinculacaoNome": "BELLEDENT ODONTOLOGIA",
+        "vinculacaoRazaoSocial": "CONSULTORIO ODONTOLOGICO MATHIAS PEDROSO",
+        "vinculacaoCnpj": "9425282000143",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R ANNE FRANK, 983 CEP 81610020",
+              "bairro": "HAUER",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.47532250",
+              "longitude": "-49.24876510",
+              "distancia": "72"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "33764946", "ramal": null },
+              { "ddd": "41", "numero": "30594945", "ramal": null }
+            ],
+            "email": "ODONTOVITALEDENT@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2022-08-10T19:33:38.561+0000"
+      },
+      {
+        "nome": "CRISTIANE DE QUADROS CALEGARIO",
+        "cro": "10126",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "87526239987",
+        "razaoSocial": "CRISTIANE DE QUADROS CALEGARIO TRANCHO",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "115422188",
+        "vinculacaoNome": "ODONTOCLASS",
+        "vinculacaoRazaoSocial": "CRISTIANE DE QUADROS CALEGARIO TRANCHO",
+        "vinculacaoCnpj": "5552289000175",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA COLOMBO, 1775 CEP 83005400",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.53625030",
+              "longitude": "-49.19643570",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [{ "ddd": "41", "numero": "30351794", "ramal": null }],
+            "email": "CRISTIANE-ODONTO@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2023-03-07T19:33:38.561+0000"
+      },
+      {
+        "nome": "JESSICA ELLEN ARAUJO",
+        "cro": "25549",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "07921318940",
+        "razaoSocial": "JESSICA ELLEN ARAUJO",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R ALCÍDIO VIANA, 916 SALA 201 CEP 83005560",
+              "bairro": "SÃO PEDRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.54261640",
+              "longitude": "-49.19606360",
+              "distancia": "66"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "999001070", "ramal": null },
+              { "ddd": "41", "numero": "991262880", "ramal": null },
+              { "ddd": "41", "numero": "35149018", "ramal": null }
+            ],
+            "email": "DRA.JESSICAODONTOLOGIA@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-05-20T19:33:38.561+0000"
+      },
+      {
+        "nome": "GUILHERME SILVA DO CARMO",
+        "cro": "24654",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "03705987178",
+        "razaoSocial": "GSC ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "125087284",
+        "vinculacaoNome": "GC ODONTOLOGIA",
+        "vinculacaoRazaoSocial": "GSC ODONTOLOGIA LTDA",
+        "vinculacaoCnpj": "48002651000147",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA PROFESSOR JOÃO SOARES BARCELOS, 1381 SALA 01  CEP 81630060",
+              "bairro": "HAUER",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.48575620",
+              "longitude": "-49.25182770",
+              "distancia": "72"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "30920944", "ramal": null },
+              { "ddd": "41", "numero": "997231828", "ramal": null }
+            ],
+            "email": "GCODONTOLOGIA7@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2022-12-20T19:33:38.561+0000"
+      },
+      {
+        "nome": "THIAGO DANGUI CLOSS",
+        "cro": "19677",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "04797989904",
+        "razaoSocial": "THIAGO DANGUI CLOSS",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA DESEMBARGADOR MOTTA, 1824 CEP 80420164",
+              "bairro": "BATEL",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.43829420",
+              "longitude": "-49.18677250",
+              "distancia": "66"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CIRURGIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ENDODONTIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "35035553", "ramal": null },
+              { "ddd": "41", "numero": "995406376", "ramal": null }
+            ],
+            "email": "MAZALOTTIODONTOLOGIA@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2021-12-22T19:33:38.561+0000"
+      },
+      {
+        "nome": "INTERSAUDE ODONTOLOGIA & PSICOLOGIA LTDA",
+        "cro": "13435",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "07701476000107",
+        "razaoSocial": "INTERSAUDE ODONTOLOGIA & PSICOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA ISAQUE RODRIGUES DA SILVA, 28 CEP 83420000",
+              "bairro": "CENTRO",
+              "cidade": "QUATRO BARRAS",
+              "uf": "PR",
+              "latitude": "-25.37062270",
+              "longitude": "-49.07932460",
+              "distancia": "57"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ENDODONTIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "36723422", "ramal": null },
+              { "ddd": "41", "numero": "36722700", "ramal": null }
+            ],
+            "email": "CLINICAINTERSAUDE@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2018-09-27T19:33:38.561+0000"
+      },
+      {
+        "nome": "ODONTOCLASS",
+        "cro": "10126",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "05552289000175",
+        "razaoSocial": "CRISTIANE DE QUADROS CALEGARIO TRANCHO",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": true,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA COLOMBO, 1775 CEP 83005400",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.53625030",
+              "longitude": "-49.19643570",
+              "distancia": "66"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": "9",
+                "descricaoAreaAtuacao": "ORTODONTIA"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "30351794", "ramal": null }],
+            "email": "CRISTIANE-ODONTO@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2023-03-07T19:33:38.561+0000"
+      },
+      {
+        "nome": "ANDRE LUIZ BARCIA DA SILVA",
+        "cro": "13435",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "02638008907",
+        "razaoSocial": "INTERSAUDE ODONTOLOGIA & PSICOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "105547239",
+        "vinculacaoNome": "INTERSAUDE ODONTOLOGIA & PSICOLOGIA LTDA",
+        "vinculacaoRazaoSocial": "INTERSAUDE ODONTOLOGIA & PSICOLOGIA LTDA",
+        "vinculacaoCnpj": "7701476000107",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA ISAQUE RODRIGUES DA SILVA, 28 CEP 83420000",
+              "bairro": "CENTRO",
+              "cidade": "QUATRO BARRAS",
+              "uf": "PR",
+              "latitude": "-25.37062270",
+              "longitude": "-49.07932460",
+              "distancia": "57"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "36723422", "ramal": null },
+              { "ddd": "41", "numero": "36722700", "ramal": null }
+            ],
+            "email": "CLINICAINTERSAUDE@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2018-09-27T19:33:38.561+0000"
+      },
+      {
+        "nome": "GRACIELI LETICIA RODEGE",
+        "cro": "17897",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "03522063902",
+        "razaoSocial": "CRISTIANE DE QUADROS CALEGARIO TRANCHO",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "115422188",
+        "vinculacaoNome": "ODONTOCLASS",
+        "vinculacaoRazaoSocial": "CRISTIANE DE QUADROS CALEGARIO TRANCHO",
+        "vinculacaoCnpj": "5552289000175",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA COLOMBO, 1775 CEP 83005400",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.53625030",
+              "longitude": "-49.19643570",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [{ "ddd": "41", "numero": "30351794", "ramal": null }],
+            "email": "CRISTIANE-ODONTO@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2023-03-07T19:33:38.561+0000"
+      },
+      {
+        "nome": "PAOLA MICHELE MEDEIROS",
+        "cro": "15593",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "03369959976",
+        "razaoSocial": "FAVATO ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "112897215",
+        "vinculacaoNome": "CONSULTORIO ODONTOLOGICO DR JESSICA C. FAVATO",
+        "vinculacaoRazaoSocial": "FAVATO ODONTOLOGIA LTDA",
+        "vinculacaoCnpj": "34893278000157",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "ALCÍDIO VIANA, 837 SALA 502 5 ANDAR CEP 83005560",
+              "bairro": "SÃO PEDRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.54192180",
+              "longitude": "-49.19491840",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "30813167", "ramal": null },
+              { "ddd": "41", "numero": "999800292", "ramal": null }
+            ],
+            "email": "FAVATOODONTOLOGIA@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2020-05-12T19:33:38.561+0000"
+      },
+      {
+        "nome": "PROMUS CONSULT E PROM DE SAUDE S/C LTDA",
+        "cro": "19431",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "02074507000115",
+        "razaoSocial": "PROMUS CONSULT E PROM DE SAUDE S/C LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R DELEGADO LEOPOLDO BELCZAK, 1100 CEP 82800220",
+              "bairro": "CAPÃO DA IMBUIA",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.43661590",
+              "longitude": "-49.22569310",
+              "distancia": "70"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "30149390", "ramal": null }],
+            "email": "PROMUS.ODO@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2021-05-27T19:33:38.561+0000"
+      },
+      {
+        "nome": "EVERTON RODRIGO AMARAL",
+        "cro": "11246",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "01692027980",
+        "razaoSocial": "ODONTO SAO CAMILO",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "100327265",
+        "vinculacaoNome": "CLINICA ODONTOLOGICA ECER LTDA ME",
+        "vinculacaoRazaoSocial": "ODONTO SAO CAMILO",
+        "vinculacaoCnpj": "5512980000125",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "AV CAMILO DI LELLIS, 348 SALA 113 CEP 83323000",
+              "bairro": "CENTRO",
+              "cidade": "PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.43724280",
+              "longitude": "-49.18619920",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "30330303", "ramal": null },
+              { "ddd": "41", "numero": "997882286", "ramal": null }
+            ],
+            "email": "EMILIOAMARAL@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2020-10-09T19:33:38.561+0000"
+      },
+      {
+        "nome": "GABRIELA GALVAO BOVO",
+        "cro": "22990",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "07178712902",
+        "razaoSocial": "ORTOPINHAIS CLINICA ODONTOLOGICA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "4423875",
+        "vinculacaoNome": "POLICLINICA ORTOPINHAIS",
+        "vinculacaoRazaoSocial": "ORTOPINHAIS CLINICA ODONTOLOGICA",
+        "vinculacaoCnpj": "7053270000100",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "AV JACOB MACANHAN, 273 CEP 83324510",
+              "bairro": "CENTRO",
+              "cidade": "PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.430287",
+              "longitude": "-49.18384670",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "35572845", "ramal": null },
+              { "ddd": "41", "numero": "998820037", "ramal": null }
+            ],
+            "email": "JAQUELINEMILLEO@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2020-10-09T19:33:38.561+0000"
+      },
+      {
+        "nome": "DOUGLAS COLLETE RODRIGUES",
+        "cro": "26140",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "05967601910",
+        "razaoSocial": "DOUGLAS COLLETE RODRIGUES",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "PROFESSOR JOÃO SOARES BARCELOS, 1336 SALA 14 CEP 81630060",
+              "bairro": "HAUER",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.485447",
+              "longitude": "-49.25258490",
+              "distancia": "72"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CIRURGIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ENDODONTIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "PERIODONTIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "30306185", "ramal": null },
+              { "ddd": "41", "numero": "992835248", "ramal": null }
+            ],
+            "email": "DODOCOLLETE@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-04-23T19:33:38.561+0000"
+      },
+      {
+        "nome": "GRAZIELY DE OLIVEIRA SANTOS",
+        "cro": "31016",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "09137261924",
+        "razaoSocial": "INTERSAUDE ODONTOLOGIA & PSICOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "105547239",
+        "vinculacaoNome": "INTERSAUDE ODONTOLOGIA & PSICOLOGIA LTDA",
+        "vinculacaoRazaoSocial": "INTERSAUDE ODONTOLOGIA & PSICOLOGIA LTDA",
+        "vinculacaoCnpj": "7701476000107",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA ISAQUE RODRIGUES DA SILVA, 28 CEP 83420000",
+              "bairro": "CENTRO",
+              "cidade": "QUATRO BARRAS",
+              "uf": "PR",
+              "latitude": "-25.37062270",
+              "longitude": "-49.07932460",
+              "distancia": "57"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "36723422", "ramal": null },
+              { "ddd": "41", "numero": "36722700", "ramal": null }
+            ],
+            "email": "CLINICAINTERSAUDE@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2022-09-12T19:33:38.561+0000"
+      },
+      {
+        "nome": "CONSULTORIO ODONTOLOGICO HEIDEN LTDA - ME",
+        "cro": "10308",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "05751295000151",
+        "razaoSocial": "CONSULTORIO ODONTOLOGICO HEIDEN LTDA - ME",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA LUIZ FRANÇA, 746 CONJUNTO 08 CEP 82900250",
+              "bairro": "CAJURU",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.44582150",
+              "longitude": "-49.22357330",
+              "distancia": "70"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "32661101", "ramal": null }],
+            "email": "CPHEIDEN@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2016-06-21T19:33:38.561+0000"
+      },
+      {
+        "nome": "CLARIANA SANCHEZ",
+        "cro": "26081",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "00050671200",
+        "razaoSocial": "AK ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "112092187",
+        "vinculacaoNome": "AK SORRISO ODONTOLOGIA ESPECIALIZADA",
+        "vinculacaoRazaoSocial": "AK ODONTOLOGIA LTDA",
+        "vinculacaoCnpj": "18526846000125",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA DESEMBARGADOR HUGO SIMAS, 141 CEP 83203250",
+              "bairro": "CENTRO HISTÓRICO",
+              "cidade": "PARANAGUÁ",
+              "uf": "PR",
+              "latitude": "-25.51972450",
+              "longitude": "-48.50743560",
+              "distancia": "2"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "34259911", "ramal": null },
+              { "ddd": "41", "numero": "991019911", "ramal": null }
+            ],
+            "email": "AKSORRISO@OUTLOOK.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2020-03-06T19:33:38.561+0000"
+      },
+      {
+        "nome": "THIAGO SOUZA DE LIMA",
+        "cro": "23408",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "07086816973",
+        "razaoSocial": "THIAGO SOUZA DE LIMA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R TELÊMACO BORBA, 98 C CEP 83410590",
+              "bairro": "GUARAITUBA",
+              "cidade": "COLOMBO",
+              "uf": "PR",
+              "latitude": "-25.35016450",
+              "longitude": "-49.165227",
+              "distancia": "66"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "36668279", "ramal": null },
+              { "ddd": "41", "numero": "30556213", "ramal": null }
+            ],
+            "email": "THIAGO.SOUZADELIMA@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2015-03-16T19:33:38.561+0000"
+      },
+      {
+        "nome": "TAMIRIS DOS SANTOS SILVA",
+        "cro": "24322",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "14946302735",
+        "razaoSocial": "ORTOPINHAIS CLINICA ODONTOLOGICA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "4423875",
+        "vinculacaoNome": "POLICLINICA ORTOPINHAIS",
+        "vinculacaoRazaoSocial": "ORTOPINHAIS CLINICA ODONTOLOGICA",
+        "vinculacaoCnpj": "7053270000100",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "AV JACOB MACANHAN, 273 CEP 83324510",
+              "bairro": "CENTRO",
+              "cidade": "PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.430287",
+              "longitude": "-49.18384670",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "35572845", "ramal": null },
+              { "ddd": "41", "numero": "998820037", "ramal": null }
+            ],
+            "email": "JAQUELINEMILLEO@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2020-10-09T19:33:38.561+0000"
+      },
+      {
+        "nome": "EDUARDO LAZZARIN",
+        "cro": "7681",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "56648936991",
+        "razaoSocial": "EDUARDO LAZZARIN",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "AV CAMILO DI LELLIS, 100 SALA 02 CEP 83323000",
+              "bairro": "CENTRO",
+              "cidade": "PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.43491040",
+              "longitude": "-49.18496150",
+              "distancia": "66"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ODONTOPEDIATRIA"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "36687966", "ramal": null }],
+            "email": "LAZZARIN.EDUARDO@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2016-04-25T19:33:38.561+0000"
+      },
+      {
+        "nome": "MARCOS VINICIUS ALMEIDA MARQUES",
+        "cro": "15572",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": null,
+        "razaoSocial": "SANTI & MARQUES ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "100301856",
+        "vinculacaoNome": "SANTI & MARQUES ODONTOLOGIA LTDA",
+        "vinculacaoRazaoSocial": "SANTI & MARQUES ODONTOLOGIA LTDA",
+        "vinculacaoCnpj": "10282360000187",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R LEONARDO FRANCISCHELLI, 265 SALA 1 CEP 83430000",
+              "bairro": "JARDIM PAULISTA",
+              "cidade": "CAMPINA GRANDE DO SUL",
+              "uf": "PR",
+              "latitude": "-25.36446480",
+              "longitude": "-49.10169960",
+              "distancia": "60"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "36795739", "ramal": null }],
+            "email": "CLINIVIDA_@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": null
+      },
+      {
+        "nome": "RENATA HIGAKI YENDO",
+        "cro": "11319",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "17791399857",
+        "razaoSocial": "RENATA HIGAKI YENDO ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "110927184",
+        "vinculacaoNome": "RENATA HIGAKI YENDO ODONTOLOGIA LTDA",
+        "vinculacaoRazaoSocial": "RENATA HIGAKI YENDO ODONTOLOGIA LTDA",
+        "vinculacaoCnpj": "8809115000133",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA JOÃO ÂNGELO CORDEIRO, 879 CEP 83005570",
+              "bairro": "SÃO PEDRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.54394730",
+              "longitude": "-49.19776570",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "32828487", "ramal": null },
+              { "ddd": "41", "numero": "97848085", "ramal": null }
+            ],
+            "email": "ODONTOCLINICA_SAOJOSE@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-12-26T19:33:38.561+0000"
+      },
+      {
+        "nome": "PATRICIA JOPPERT DE ANDRADA PEDEMEIRAS",
+        "cro": "19431",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": null,
+        "razaoSocial": "PROMUS CONSULT E PROM DE SAUDE S/C LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "100301618",
+        "vinculacaoNome": "PROMUS CONSULT E PROM DE SAUDE S/C LTDA",
+        "vinculacaoRazaoSocial": "PROMUS CONSULT E PROM DE SAUDE S/C LTDA",
+        "vinculacaoCnpj": "2074507000115",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R DELEGADO LEOPOLDO BELCZAK, 1100 CEP 82800220",
+              "bairro": "CAPÃO DA IMBUIA",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.43661590",
+              "longitude": "-49.22569310",
+              "distancia": "70"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "30149390", "ramal": null }],
+            "email": "PROMUS.ODO@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": null
+      },
+      {
+        "nome": "ODONTO PREMIUM",
+        "cro": "10308",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "05751295000232",
+        "razaoSocial": "CONSULTORIO ODONTOLOGICO HEIDEN",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R ALMIRANTE ALEXANDRINO, 1573 SOBRELOJA CEP 83040420",
+              "bairro": "AFONSO PENA",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.50765920",
+              "longitude": "-49.183648",
+              "distancia": "65"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ENDODONTIA"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "30533030", "ramal": null }],
+            "email": "ODONTOPREMIUMSJP@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2016-02-29T19:33:38.561+0000"
+      },
+      {
+        "nome": "ANDRESSA MARENDA CZABAN",
+        "cro": "19836 ",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "03750987980",
+        "razaoSocial": "ORTO STUDIO ODONTOLOGIA EIRELI ",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": null,
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "131462229",
+        "vinculacaoNome": "ORTO STUDIO",
+        "vinculacaoRazaoSocial": "ORTO STUDIO ODONTOLOGIA EIRELI ",
+        "vinculacaoCnpj": "34127617000194",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA LEONARDO FRANCISCHELLI, 322 SOBRELOJA CEP 83430000",
+              "bairro": "JARDIM PAULISTA",
+              "cidade": "CAMPINA GRANDE DO SUL",
+              "uf": "PR",
+              "latitude": "-25.360645",
+              "longitude": "-49.10267330",
+              "distancia": "60"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "30169422", "ramal": null },
+              { "ddd": "41", "numero": "997511455", "ramal": null },
+              { "ddd": "41", "numero": "988377554", "ramal": null }
+            ],
+            "email": "CONTATO@ORTOSTUDIO.COM.BR",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2023-09-25T19:33:38.561+0000"
+      },
+      {
+        "nome": "CELSO LUIZ ALVES CORDEIRO",
+        "cro": "19076",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "22612912991",
+        "razaoSocial": "CELSO LUIZ ALVES CORDEIRO",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R PRINCESA ISABEL, 228 CEP 83203200",
+              "bairro": "CENTRO HISTÓRICO",
+              "cidade": "PARANAGUÁ",
+              "uf": "PR",
+              "latitude": "-25.516752",
+              "longitude": "-48.50471670",
+              "distancia": "2"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CIRURGIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ENDODONTIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "PACIENTES ESPECIAIS"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "PERIODONTIA"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "34220077", "ramal": null }],
+            "email": "CLINICADRCELSO@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": null
+      },
+      {
+        "nome": "BELLEDENT ODONTOLOGIA",
+        "cro": "21396",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "09425282000143",
+        "razaoSocial": "CONSULTORIO ODONTOLOGICO MATHIAS PEDROSO",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": true,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R ANNE FRANK, 983 CEP 81610020",
+              "bairro": "HAUER",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.47532250",
+              "longitude": "-49.24876510",
+              "distancia": "72"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ORTODONTIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "33764946", "ramal": null },
+              { "ddd": "41", "numero": "30594945", "ramal": null }
+            ],
+            "email": "ODONTOVITALEDENT@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2015-07-06T19:33:38.561+0000"
+      },
+      {
+        "nome": "MOURA E COSTA CLINICA DE RADIOLOGIA LTDA",
+        "cro": "16888",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "18648237000149",
+        "razaoSocial": "MOURA E COSTA CLINICA DE RADIOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "RADIOLOGIA ODONTOLÓGICA ",
+        "website": null,
+        "especialista": true,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R DOUTOR MARCELINO NOGUEIRA, 580 SALA 154 CEP 83005370",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.53812020",
+              "longitude": "-49.19792680",
+              "distancia": "66"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "RADIOLOGIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "30814419", "ramal": null },
+              { "ddd": "41", "numero": "35987005", "ramal": null },
+              { "ddd": "41", "numero": "991521667", "ramal": null }
+            ],
+            "email": "MACIMAGEM@MACIMAGEM.COM.BR",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2017-07-03T19:33:38.561+0000"
+      },
+      {
+        "nome": "VANESSA CRISTINA CORDEIRO DA SILVA",
+        "cro": "15890",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "02867098998",
+        "razaoSocial": "VANESSA CRISTINA CORDEIRO DA SILVA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA PROFESSOR DUÍLIO CALDERARI, 1493 SALA 01 CEP 83430000",
+              "bairro": "JARDIM PAULISTA",
+              "cidade": "CAMPINA GRANDE DO SUL",
+              "uf": "PR",
+              "latitude": "-25.36325830",
+              "longitude": "-49.09668120",
+              "distancia": "59"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ENDODONTIA"
+              },
+              { "codigoQualificacao": null, "descricaoAreaAtuacao": "PRÓTESE" }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "36794851", "ramal": null },
+              { "ddd": "41", "numero": "998198781", "ramal": null }
+            ],
+            "email": "VANECRISTINA_76@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2020-04-08T19:33:38.561+0000"
+      },
+      {
+        "nome": "ARTHUR GUSTAVO PREIZNER PANINI",
+        "cro": "24425",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "07726234903",
+        "razaoSocial": "ARTHUR GUSTAVO PREIZNER PANINI",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA ALBERICO FLORES BUENO, 394 CEP 82840170",
+              "bairro": "BAIRRO ALTO",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.39721670",
+              "longitude": "-49.208583",
+              "distancia": "69"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "996697586", "ramal": null }],
+            "email": "ODONTOCLAIRE@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2022-04-19T19:33:38.561+0000"
+      },
+      {
+        "nome": "JOAO MARCELO PRENDIM",
+        "cro": "20637",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "04915481921",
+        "razaoSocial": "JOAO MARCELO PRENDIM",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "ITALINO PERUFFO, 59 CEP 81650330",
+              "bairro": "BOQUEIRÃO",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.50192170",
+              "longitude": "-49.23645620",
+              "distancia": "70"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ENDODONTIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ODONTOPEDIATRIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "32769273", "ramal": null },
+              { "ddd": "41", "numero": "999851745", "ramal": null }
+            ],
+            "email": "MAR.SORRISO@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2018-02-20T19:33:38.561+0000"
+      },
+      {
+        "nome": "AK SORRISO ODONTOLOGIA ESPECIALIZADA",
+        "cro": "21218",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "18526846000125",
+        "razaoSocial": "AK ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": true,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA DESEMBARGADOR HUGO SIMAS, 141 CEP 83203250",
+              "bairro": "CENTRO HISTÓRICO",
+              "cidade": "PARANAGUÁ",
+              "uf": "PR",
+              "latitude": "-25.51972450",
+              "longitude": "-48.50743560",
+              "distancia": "2"
+            },
+            "areasAtuacao": [
+              { "codigoQualificacao": "9", "descricaoAreaAtuacao": "CIRURGIA" },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": "9",
+                "descricaoAreaAtuacao": "ENDODONTIA"
+              },
+              {
+                "codigoQualificacao": "9",
+                "descricaoAreaAtuacao": "ORTODONTIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "34259911", "ramal": null },
+              { "ddd": "41", "numero": "991019911", "ramal": null }
+            ],
+            "email": "AKSORRISO@OUTLOOK.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2020-03-06T19:33:38.561+0000"
+      },
+      {
+        "nome": "GABRIELA MARIA FEDIUK BATISTA DE QUEIROZ",
+        "cro": "26614",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "07349315902",
+        "razaoSocial": "GABRIELA MARIA FEDIUK ATIVIDADES ODONTOLOGICAS LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "121032248",
+        "vinculacaoNome": "NOBRE SORRISO",
+        "vinculacaoRazaoSocial": "GABRIELA MARIA FEDIUK ATIVIDADES ODONTOLOGICAS LTDA",
+        "vinculacaoCnpj": "39465397000122",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA MENDES LEITÃO, 2569 CEP 83005150",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.53708890",
+              "longitude": "-49.20449340",
+              "distancia": "67"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "35883730", "ramal": null },
+              { "ddd": "41", "numero": "988208544", "ramal": null }
+            ],
+            "email": "GABRIELA.FEDIUK@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2021-10-19T19:33:38.561+0000"
+      },
+      {
+        "nome": "GUILHERME SAPORSKI KNABEN NOGUEIRA ALVES",
+        "cro": "26208",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "09684604963",
+        "razaoSocial": "ORAL GOLD CONSULTORIO ODONTOLOGICO LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "122042298",
+        "vinculacaoNome": "ORAL GOLD CONSULTORIO ODONTOLOGICO",
+        "vinculacaoRazaoSocial": "ORAL GOLD CONSULTORIO ODONTOLOGICO LTDA",
+        "vinculacaoCnpj": "33530722000107",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA OURIZONA, 2645 CEP 81925360",
+              "bairro": "SÍTIO CERCADO",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.53885550",
+              "longitude": "-49.25537990",
+              "distancia": "72"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "30798499", "ramal": null },
+              { "ddd": "41", "numero": "999993718", "ramal": null }
+            ],
+            "email": "ORALGOLD.CLINICA@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2022-04-29T19:33:38.561+0000"
+      },
+      {
+        "nome": "ANGELA MARIA POLETO",
+        "cro": "21692",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "01844579980",
+        "razaoSocial": "JRA ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "109417224",
+        "vinculacaoNome": "JRA ODONTOLOGIA LTDA",
+        "vinculacaoRazaoSocial": "JRA ODONTOLOGIA LTDA",
+        "vinculacaoCnpj": "32740224000126",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA MENDES LEITÃO, 2590 SALA 02 CEP 83005150",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.53711540",
+              "longitude": "-49.20474010",
+              "distancia": "67"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "33838025", "ramal": null },
+              { "ddd": "41", "numero": "996011211", "ramal": null }
+            ],
+            "email": "ANGELAPOLETO@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-10-02T19:33:38.561+0000"
+      },
+      {
+        "nome": "AMANDA PERES RIGONI",
+        "cro": "31757",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "10440609992",
+        "razaoSocial": "AMANDA PERES RIGONI",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "VOLUNTÁRIOS DA PÁTRIA, 17 CEP 83005020",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.53602770",
+              "longitude": "-49.211626",
+              "distancia": "68"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CIRURGIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ODONTOGERIATRIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ODONTOPEDIATRIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "PERIODONTIA"
+              },
+              { "codigoQualificacao": null, "descricaoAreaAtuacao": "PRÓTESE" }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "998660758", "ramal": null }],
+            "email": "AMANDA.PERES.2006@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2024-01-11T19:33:38.561+0000"
+      },
+      {
+        "nome": "CRISTIANO RAMOS DE LIMA ",
+        "cro": "12022",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "01877333921",
+        "razaoSocial": "CLINICA ODONTOLOGICA STARDENT LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "100682472",
+        "vinculacaoNome": "STARDENT",
+        "vinculacaoRazaoSocial": "CLINICA ODONTOLOGICA STARDENT LTDA",
+        "vinculacaoCnpj": "8382914000176",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R IZABEL A REDENTORA, 2188 SOBRE LOJA CEP 83005010",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.54048860",
+              "longitude": "-49.197589",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "32826808", "ramal": null },
+              { "ddd": "41", "numero": "33856684", "ramal": null }
+            ],
+            "email": "CLINICASTARDENT@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2016-03-09T19:33:38.561+0000"
+      },
+      {
+        "nome": "SANTI & MARQUES ODONTOLOGIA LTDA",
+        "cro": "15572",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "10282360000187",
+        "razaoSocial": "SANTI & MARQUES ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R LEONARDO FRANCISCHELLI, 265 SALA 1 CEP 83430000",
+              "bairro": "JARDIM PAULISTA",
+              "cidade": "CAMPINA GRANDE DO SUL",
+              "uf": "PR",
+              "latitude": "-25.36446480",
+              "longitude": "-49.10169960",
+              "distancia": "60"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "36795739", "ramal": null }],
+            "email": "CLINIVIDA_@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": null
+      },
+      {
+        "nome": "THAMARA REGINA RODRIGUES CORREA",
+        "cro": "27377",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "08367383907",
+        "razaoSocial": "THAMARA REGINA RODRIGUES CORREA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "MARECHAL DEODORO DA FONSECA, 600 SALA 1 CEP 83005350",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.53916530",
+              "longitude": "-49.200811",
+              "distancia": "67"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "31463262", "ramal": null }],
+            "email": "TAMARA.CTA@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-04-23T19:33:38.561+0000"
+      },
+      {
+        "nome": "GABRIELA MARIA FEDIUK BATISTA DE QUEIROZ",
+        "cro": "26614",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "07349315902",
+        "razaoSocial": "JRA ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "109417224",
+        "vinculacaoNome": "JRA ODONTOLOGIA LTDA",
+        "vinculacaoRazaoSocial": "JRA ODONTOLOGIA LTDA",
+        "vinculacaoCnpj": "32740224000126",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA MENDES LEITÃO, 2590 SALA 02 CEP 83005150",
+              "bairro": "CENTRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.53711540",
+              "longitude": "-49.20474010",
+              "distancia": "67"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "33838025", "ramal": null },
+              { "ddd": "41", "numero": "996011211", "ramal": null }
+            ],
+            "email": "ANGELAPOLETO@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-10-02T19:33:38.561+0000"
+      },
+      {
+        "nome": "NATASHA TULESKI RICCHI",
+        "cro": "13477",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": null,
+        "razaoSocial": "PROMUS CONSULT E PROM DE SAUDE S/C LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "100301618",
+        "vinculacaoNome": "PROMUS CONSULT E PROM DE SAUDE S/C LTDA",
+        "vinculacaoRazaoSocial": "PROMUS CONSULT E PROM DE SAUDE S/C LTDA",
+        "vinculacaoCnpj": "2074507000115",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R DELEGADO LEOPOLDO BELCZAK, 1100 CEP 82800220",
+              "bairro": "CAPÃO DA IMBUIA",
+              "cidade": "CURITIBA",
+              "uf": "PR",
+              "latitude": "-25.43661590",
+              "longitude": "-49.22569310",
+              "distancia": "70"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "30149390", "ramal": null }],
+            "email": "PROMUS.ODO@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": null
+      },
+      {
+        "nome": "JESSICA CARINE FAVATO",
+        "cro": "22982",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "06239686905",
+        "razaoSocial": "FAVATO ODONTOLOGIA LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "112897215",
+        "vinculacaoNome": "CONSULTORIO ODONTOLOGICO DR JESSICA C. FAVATO",
+        "vinculacaoRazaoSocial": "FAVATO ODONTOLOGIA LTDA",
+        "vinculacaoCnpj": "34893278000157",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "ALCÍDIO VIANA, 837 SALA 502 5 ANDAR CEP 83005560",
+              "bairro": "SÃO PEDRO",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.54192180",
+              "longitude": "-49.19491840",
+              "distancia": "66"
+            },
+            "areasAtuacao": null,
+            "telefone": [
+              { "ddd": "41", "numero": "30813167", "ramal": null },
+              { "ddd": "41", "numero": "999800292", "ramal": null }
+            ],
+            "email": "FAVATOODONTOLOGIA@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2020-05-12T19:33:38.561+0000"
+      },
+      {
+        "nome": "DANIELLE CRISTINA ALVES LIMA",
+        "cro": "32947",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "01696962277",
+        "razaoSocial": "DANIELLE CRISTINA ALVES LIMA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "ALMIRANTE ALEXANDRINO, 1573 SOBRELOJA CEP 83040420",
+              "bairro": "AFONSO PENA",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.50767890",
+              "longitude": "-49.18368850",
+              "distancia": "65"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ENDODONTIA"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "ODONTOPEDIATRIA"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "988137323", "ramal": null }],
+            "email": "DANIELLE.AL@ICLOUD.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2023-09-20T19:33:38.561+0000"
+      },
+      {
+        "nome": "CLINICA RADIOLOGICA COLOMBO LTDA",
+        "cro": "5356",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "12934835000106",
+        "razaoSocial": "CLINICA RADIOLOGICA COLOMBO LTDA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "RADIOLOGIA ODONTOLÓGICA ",
+        "website": null,
+        "especialista": true,
+        "tipoPessoa": "PJ",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA GRACILIANO RAMOS, 31 CEP 83409350",
+              "bairro": "GUARANI",
+              "cidade": "COLOMBO",
+              "uf": "PR",
+              "latitude": "-25.36849080",
+              "longitude": "-49.18487470",
+              "distancia": "68"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "RADIOLOGIA"
+              }
+            ],
+            "telefone": [
+              { "ddd": "41", "numero": "33246554", "ramal": null },
+              { "ddd": "41", "numero": "30371188", "ramal": null }
+            ],
+            "email": "CRC.COLOMBO@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2019-07-05T19:33:38.561+0000"
+      },
+      {
+        "nome": "CAMILA MARTINS DA SILVA",
+        "cro": "25947",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "06768736930",
+        "razaoSocial": "CAMILA MARTINS DA SILVA",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "1",
+        "vinculacaoCodigo": null,
+        "vinculacaoNome": null,
+        "vinculacaoRazaoSocial": null,
+        "vinculacaoCnpj": null,
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "RUA GENÉSIO MORESCHI, 250 CEP 83410000",
+              "bairro": "GUARAITUBA",
+              "cidade": "COLOMBO",
+              "uf": "PR",
+              "latitude": "-25.35228790",
+              "longitude": "-49.16657120",
+              "distancia": "66"
+            },
+            "areasAtuacao": [
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "CLÍNICA GERAL"
+              },
+              {
+                "codigoQualificacao": null,
+                "descricaoAreaAtuacao": "DENTÍSTICA"
+              }
+            ],
+            "telefone": [{ "ddd": "41", "numero": "995655514", "ramal": null }],
+            "email": "CAMILA.MARTINSSILVA@HOTMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2020-01-06T19:33:38.561+0000"
+      },
+      {
+        "nome": "CHRISTIAN DENIS HEIDEN",
+        "cro": "10308",
+        "ufCro": "PR",
+        "codigoPrestador": null,
+        "cpfCnpj": "93934807968",
+        "razaoSocial": "CONSULTORIO ODONTOLOGICO HEIDEN",
+        "rede": "REDE ODONTO",
+        "tipoEstabelecimento": "CONSULTÓRIOS E CLÍNICAS ",
+        "website": null,
+        "especialista": false,
+        "tipoPessoa": "PF",
+        "relacaoOperadora": "14",
+        "vinculacaoCodigo": "101107129",
+        "vinculacaoNome": "ODONTO PREMIUM",
+        "vinculacaoRazaoSocial": "CONSULTORIO ODONTOLOGICO HEIDEN",
+        "vinculacaoCnpj": "5751295000232",
+        "locaisAtendimento": [
+          {
+            "endereco": {
+              "logradouro": "R ALMIRANTE ALEXANDRINO, 1573 SOBRELOJA CEP 83040420",
+              "bairro": "AFONSO PENA",
+              "cidade": "SÃO JOSÉ DOS PINHAIS",
+              "uf": "PR",
+              "latitude": "-25.50765920",
+              "longitude": "-49.183648",
+              "distancia": "65"
+            },
+            "areasAtuacao": null,
+            "telefone": [{ "ddd": "41", "numero": "30533030", "ramal": null }],
+            "email": "ODONTOPREMIUMSJP@GMAIL.COM",
+            "site": null
+          }
+        ],
+        "dataAtualizacao": "2016-02-29T19:33:38.561+0000"
+      }
+    ]
+  },
+  "errors": []
+}
