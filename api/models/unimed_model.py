@@ -1,11 +1,12 @@
 import uuid
 from typing import Optional
 from pydantic import BaseModel, Field
+from datetime import datetime
 
 class Dentista(BaseModel):
     id: str = Field(default_factory=uuid.uuid4, alias="_id")
     nome: str
-    cro: str = Field(max_length=5, pattern=r'^\d*$')
+    cro: str = Field(max_length=6, pattern=r'^\d*$')
     uf_cro: str = Field(max_length=2, alias='ufCro')
     codigo_prestador: str | None = Field(alias="codigoPrestador")
     cpf_cnpj: str | None = Field(pattern=r'^\d*$', alias="cpfCnpj")
@@ -54,24 +55,6 @@ class DentistaUpdate(BaseModel):
     vinculacao_cnpj: Optional[str]
     locaisAtendimento: Optional[dict]
     data_atualizacao: Optional[dict]
-    # nome: Optional[str]
-    # cro: Optional[str]
-    # ufCro: Optional[str]
-    # codigoPrestador: Optional[str]
-    # cpfCnpj: Optional[str]
-    # razaoSocial: Optional[str]
-    # rede: Optional[str]
-    # tipoEstabelecimento: Optional[str]
-    # website: Optional[str]
-    # especialista: Optional[str]
-    # tipoPessoa: Optional[str]
-    # relacaoOperadora: Optional[str]
-    # vinculacaoCodigo: Optional[str]
-    # vinculacaoNome: Optional[str]
-    # vinculacaoRazaoSocial: Optional[str]
-    # vinculacaoCnpj: Optional[str]
-    # locaisAtendimento: Optional[dict]
-    # dataAtualizacao: Optional[dict]
 
     class Config:
         str_strip_whitespace = True
@@ -83,3 +66,12 @@ class DentistaUpdate(BaseModel):
                 "ufCro": "PR"
             }
         }
+
+class URLCrawled(BaseModel):
+    id: str = Field(default_factory=uuid.uuid4, alias="_id")
+    url: str
+    created_at: datetime = datetime.now()
+
+    class Config:
+        str_strip_whitespace = True
+        populate_by_name = True
