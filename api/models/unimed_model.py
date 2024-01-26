@@ -70,6 +70,10 @@ class DentistaUpdate(BaseModel):
 class URLCrawled(BaseModel):
     id: str = Field(default_factory=uuid.uuid4, alias="_id")
     url: str
+    plano: int
+    latitude: str
+    longitude: str
+    pagina: int
     created_at: datetime = datetime.now()
 
     class Config:

@@ -1,4 +1,5 @@
 from api.database import get_database
+from bson.objectid import ObjectId
 import os
 
 class UnimedRepository:
@@ -65,3 +66,15 @@ class UnimedRepository:
         except:
             return "Database error"
 
+    def get_urls(self):
+        collection_name = self.get_collection_name(os.getenv("UNIMED_URLS_COLLECTION"))
+        return list(collection_name.find())
+
+    def update_url(self, document_id, data):
+        collection_name = self.get_collection_name(os.getenv("UNIMED_URLS_COLLECTION"))
+
+        return collection_name.update_one(
+            {'_id': ObjectId(document_id)},
+            {'$set': data},
+            upsert=True
+        )

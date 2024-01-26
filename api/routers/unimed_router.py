@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from api.controllers.unimed_controller import UnimedController
 from api.controllers.search_points import *
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends
 
 from ..dependencies import get_token_header
 
@@ -29,3 +29,7 @@ async def find_dentistas():
 @router.get("/get_search_ponts")
 def get_search_ponts():
     get_brazil_search_points()
+
+@router.get('/update_unimed_urls')
+def update_unimed_documents():
+    return unimed_controller.update_unimed_urls()

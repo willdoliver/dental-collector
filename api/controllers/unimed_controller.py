@@ -15,20 +15,21 @@ class UnimedController():
     def get_dentistas_from_unimed_odonto(self):
 
         planos_unimed = [
-            804, 453, 374,
-            789, 788, 738, 743, 791, 790, 785, 742, 100, 805, 741,
-        #     825, 826, 827, 828,
-        #     730, 731, 732, 322, 323, 324,
-        #     459643099, 78, 459649098, 75, 459637094, 459640094, 459631095, 111, 459633091, 348, 344, 343, 342, 11, 8, 70, 5, 114, 102, 119, 43, 2, 133, 112, 41, 117, 120, 61, 52, 17, 77, 14, 79, 46, 80, 66, 55, 81, 29, 124, 110, 26, 49, 74, 58, 82, 408,
-        #     459645095, 459648090, 459642091, 19, 31, 459636096, 459639091, 98, 459632093, 338, 333, 334, 821, 455, 461, 786, 728, 727, 823, 396, 393, 399, 395, 400, 392, 398, 397, 401, 394, 10, 7, 132, 4, 125, 113, 129, 39, 1, 459630097, 40, 83, 60, 51, 67, 16, 96, 13, 131, 45, 84, 99, 54, 28, 121, 25, 128, 116, 48, 85, 57, 101, 63, 411, 410, 409, 403, 109, 105, 421, 420, 419, 418, 417, 415, 416, 402, 108, 106, 407, 107, 405,
-        #     733,
-        #     384, 385, 386, 387, 735, 739, 792, 364, 366, 456, 459,
-        #     819, 820, 822,
-        #     37, 38,
-        #     459652098, 459650091, 459644097, 459647091, 36, 86, 459638092, 459641092, 91, 459635098, 459634090, 724, 460, 454, 358, 354, 355, 357, 457, 351, 353, 12, 9, 69, 352, 6, 115, 76, 97, 103, 73, 65, 44, 126, 3, 42, 62, 53, 21, 24, 18, 68, 15, 127, 87, 47, 118, 88, 89, 56, 122, 90, 33, 30, 72, 27, 130, 92, 50, 123, 93, 64, 94, 59, 95,
-        #     388, 389, 390, 391, 368, 370,
-        #     734, 740, 729, 380, 382, 807,
-        #     782, 781, 783, 793, 780,
+            # 804, 453, 374,
+            # 789, 788, 738, 743, 791, 790, 785, 742, 100, 805, 741,
+            # 825, 826, 827, 828,
+            # 730, 731, 732, 322, 323, 324,
+            # 459643099, 78, 459649098, 75, 459637094, 459640094, 459631095, 111, 459633091, 348, 344, 343, 342, 11, 8, 70, 5, 114, 102, 119, 43, 2, 133, 112, 41, 117, 120, 61, 52, 17, 77, 14, 79, 46, 80, 66, 55, 81, 29, 124, 110, 26, 49, 74, 58, 82, 408,
+            459645095,
+            # 459648090, 459642091, 19, 31, 459636096, 459639091, 98, 459632093, 338, 333, 334, 821, 455, 461, 786, 728, 727, 823, 396, 393, 399, 395, 400, 392, 398, 397, 401, 394, 10, 7, 132, 4, 125, 113, 129, 39, 1, 459630097, 40, 83, 60, 51, 67, 16, 96, 13, 131, 45, 84, 99, 54, 28, 121, 25, 128, 116, 48, 85, 57, 101, 63, 411, 410, 409, 403, 109, 105, 421, 420, 419, 418, 417, 415, 416, 402, 108, 106, 407, 107, 405,
+            # 733,
+            # 384, 385, 386, 387, 735, 739, 792, 364, 366, 456, 459,
+            # 819, 820, 822,
+            # 37, 38,
+            # 459652098, 459650091, 459644097, 459647091, 36, 86, 459638092, 459641092, 91, 459635098, 459634090, 724, 460, 454, 358, 354, 355, 357, 457, 351, 353, 12, 9, 69, 352, 6, 115, 76, 97, 103, 73, 65, 44, 126, 3, 42, 62, 53, 21, 24, 18, 68, 15, 127, 87, 47, 118, 88, 89, 56, 122, 90, 33, 30, 72, 27, 130, 92, 50, 123, 93, 64, 94, 59, 95,
+            # 388, 389, 390, 391, 368, 370,
+            # 734, 740, 729, 380, 382, 807,
+            # 782, 781, 783, 793, 780,
         ]
 
         points = [
@@ -91,15 +92,24 @@ class UnimedController():
                             else:
                                 inserted = unimed_repository.insert_dentista(dentista_model.model_dump(exclude={'id'}))
 
-                        url_model = URLCrawled(**{'url': url_search})
-                        inserted = unimed_repository.save_url_crawled(url_model.model_dump(exclude={'id'}))
+                        if 'quantidadePaginas' in content\
+                            and content['quantidadePaginas'] is not None\
+                            and page >= int(content['quantidadePaginas']):
+                            url_model = URLCrawled(**{
+                                'url': url_search,
+                                'plano': plano,
+                                'latitude': str(point[0]),
+                                'longitude': str(point[1]),
+                                'pagina': page
+                            })
+                            inserted = unimed_repository.save_url_crawled(url_model.model_dump(exclude={'id'}))
 
-                        if inserted:
-                            urls_crawled.append(url_search)
+                            if inserted:
+                                urls_crawled.append(url_search)
 
-                        time.sleep(random.randint(3, 9))
-
-                        if page >= int(content['quantidadePaginas']):
+                            time.sleep(random.randint(9, 30))
+                            break
+                        elif 'quantidadePaginas' in content and content['quantidadePaginas'] is None:
                             break
                         else:
                             page += 1
@@ -150,3 +160,37 @@ class UnimedController():
             data = requests.get(origin)
             if data.status_code == 200:
                 return json.loads(data.content.decode('utf-8'))
+            else:
+                return {"errors": "Error when requesting page"}
+
+    def update_unimed_urls(self):
+        try:
+            documents = unimed_repository.get_urls()
+
+            elements_updated = 0
+            for document in documents:
+                document_id = document['_id']
+
+                url = document['url'].split('&')
+                plano = url[6].split('=')[-1]
+                latitude = url[7].split('=')[-1]
+                longitude = url[8].split('=')[-1]
+                numeroPagina = url[9].split('=')[-1]
+
+                data_to_update =  {
+                    'plano': plano,
+                    'latitude': latitude,
+                    'longitude': longitude,
+                    'pagina': int(numeroPagina),
+                }
+                print(data_to_update)
+
+                result = unimed_repository.update_url(document_id, data_to_update)
+
+                print('Update result: '+ str(result.modified_count))
+                elements_updated += 1
+
+            return str(elements_updated) +' documents updated successfully', 200
+        except Exception as e:
+            print(str(e))
+            return 'Internal Server Error', 500

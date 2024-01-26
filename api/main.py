@@ -13,7 +13,7 @@ app.include_router(
 
 @app.get("/")
 async def root():
-    return {"message": "Alive :)"}
+    return {"status": True, "message": "Alive :)"}
 
 @app.get("/databases")
 async def databases():
