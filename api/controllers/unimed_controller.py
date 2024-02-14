@@ -4,11 +4,12 @@ from dotenv import load_dotenv
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from api.models.unimed_model import Dentista, DentistaUpdate, URLCrawled
-from api.repositories.unimed_repository import UnimedRepository
+from api.models.unimed_model import Dentista, URLCrawled
+from api.repositories.unimed_mysql_repository import URLsCrawledRepository, DentistaRepository
 
 load_dotenv()
-unimed_repository = UnimedRepository()
+crawler_repository = URLsCrawledRepository()
+dentista_repository = DentistaRepository()
 
 class UnimedController():
 
@@ -20,7 +21,7 @@ class UnimedController():
             # 825, 826, 827, 828,
             # 730, 731, 732, 322, 323, 324,
             # 459643099, 78, 459649098, 75, 459637094, 459640094, 459631095, 111, 459633091, 348, 344, 343, 342, 11, 8, 70, 5, 114, 102, 119, 43, 2, 133, 112, 41, 117, 120, 61, 52, 17, 77, 14, 79, 46, 80, 66, 55, 81, 29, 124, 110, 26, 49, 74, 58, 82, 408,
-            459645095,
+            # 459645095,
             # 459648090, 459642091, 19, 31, 459636096, 459639091, 98, 459632093, 338, 333, 334, 821, 455, 461, 786, 728, 727, 823, 396, 393, 399, 395, 400, 392, 398, 397, 401, 394, 10, 7, 132, 4, 125, 113, 129, 39, 1, 459630097, 40, 83, 60, 51, 67, 16, 96, 13, 131, 45, 84, 99, 54, 28, 121, 25, 128, 116, 48, 85, 57, 101, 63, 411, 410, 409, 403, 109, 105, 421, 420, 419, 418, 417, 415, 416, 402, 108, 106, 407, 107, 405,
             # 733,
             # 384, 385, 386, 387, 735, 739, 792, 364, 366, 456, 459,
@@ -39,7 +40,9 @@ class UnimedController():
         try:
             urls_crawled = []
             try:
-                urls_from_repository = unimed_repository.get_urls_crawled()
+                urls_from_repository = crawler_repository.get_items()
+                print(urls_from_repository)
+
                 urls_models = [URLCrawled(**{**document, '_id': str(document['_id'])}) for document in urls_from_repository]
                 urls_crawled = [model.url for model in urls_models]
             except:
@@ -47,7 +50,7 @@ class UnimedController():
 
             for plano in planos_unimed:
                 url = []
-                url.append(os.getenv('URL_UNIMED'))
+                url.append(os.getenv('URL_MONGO_UNIMED'))
                 url.append('isRedeCredenciada=true')
                 url.append('quantidaderegistrosPagina=100')
                 url.append('codigoAreaAtuacao=0')
