@@ -4,8 +4,9 @@ from dotenv import load_dotenv
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from api.models.unimed_model import Dentista, URLCrawled
-from api.repositories.unimed_mysql_repository import URLsCrawledRepository, DentistaRepository
+from api.models.unimed_model import Dentista
+from api.repositories.unimed.dentista_repository import DentistaRepository
+from api.repositories.unimed.urls_crawled_repository import URLsCrawledRepository, URLsCrawled
 
 load_dotenv()
 crawler_repository = URLsCrawledRepository()
@@ -41,10 +42,10 @@ class UnimedController():
             urls_crawled = []
             try:
                 urls_from_repository = crawler_repository.get_items()
-                print(urls_from_repository)
-
-                urls_models = [URLCrawled(**{**document, '_id': str(document['_id'])}) for document in urls_from_repository]
+                # Using SQLAlchemy Model, not Pydantic
+                urls_models = [URLsCrawled(**{**document, 'id': str(document['id'])}) for document in urls_from_repository]
                 urls_crawled = [model.url for model in urls_models]
+                print(urls_crawled)
             except:
                 pass
 

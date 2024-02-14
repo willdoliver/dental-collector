@@ -47,22 +47,6 @@ class Dentista(Base):
         PrimaryKeyConstraint('id', 'cro', 'cro_uf'),
     )
 
-class URLsCrawled(Base):
-    __tablename__ = os.getenv("UNIMED_TABLE_URLS")
-
-    id = Column(BigInteger, primary_key=True, autoincrement=True)
-    url = Column(String(220), nullable=False)
-    latitude = Column(String(16), nullable=False)
-    longitude = Column(String(16), nullable=False)
-    numero_pagina = Column(Integer, nullable=False)
-    plano = Column(String(32), primary_key=True, nullable=False)
-    created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
-    updated_at = Column(DateTime(timezone=True), onupdate=func.now(), default=None)
-
-    __table_args__ = (
-        PrimaryKeyConstraint('id', 'plano'),
-    )
-
 engine = create_engine(DATABASE_URL)
 Base.metadata.create_all(bind=engine)
 
@@ -83,30 +67,5 @@ class DentistaRepository:
         db = SessionLocal()
         try:
             return db.query(Dentista).filter(Dentista.id == item_id).first()
-        finally:
-            db.close()
-
-class URLsCrawledRepository:
-    def create_item(self, item):
-        db = SessionLocal()
-        try:
-            db.add(item)
-            db.commit()
-            db.refresh(item)
-            return item
-        finally:
-            db.close()
-
-    def get_item(self, item_id):
-        db = SessionLocal()
-        try:
-            return db.query(Dentista).filter(Dentista.id == item_id).first()
-        finally:
-            db.close()
-
-    def get_items(self):
-        db = SessionLocal()
-        try:
-            return db.query(Dentista).all()
         finally:
             db.close()
