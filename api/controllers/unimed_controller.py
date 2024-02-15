@@ -1,15 +1,16 @@
 import os
 import requests, json, time, random
 from dotenv import load_dotenv
+from datetime import datetime
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from api.models.unimed_model import Dentista
-from api.repositories.unimed.dentista_repository import DentistaRepository
-from api.repositories.unimed.urls_crawled_repository import URLsCrawledRepository, URLsCrawled
+from api.models.unimed_model import DentistaModel, URLCrawledModel
+from api.repositories.unimed.dentista_repository import DentistaRepository, DentistaOrm
+from api.repositories.unimed.urls_crawled_repository import URLsCrawledRepository, URLsCrawledOrm
 
 load_dotenv()
-crawler_repository = URLsCrawledRepository()
+urls_crawled_repository = URLsCrawledRepository()
 dentista_repository = DentistaRepository()
 
 class UnimedController():
@@ -24,7 +25,7 @@ class UnimedController():
             # 459643099, 78, 459649098, 75, 459637094, 459640094, 459631095, 111, 459633091, 348, 344, 343, 342, 11, 8, 70, 5, 114, 102, 119, 43, 2, 133, 112, 41, 117, 120, 61, 52, 17, 77, 14, 79, 46, 80, 66, 55, 81, 29, 124, 110, 26, 49, 74, 58, 82, 408,
             # 459645095,
             # 459648090, 459642091, 19, 31, 459636096, 459639091, 98, 459632093, 338, 333, 334, 821, 455, 461, 786, 728, 727, 823, 396, 393, 399, 395, 400, 392, 398, 397, 401, 394, 10, 7, 132, 4, 125, 113, 129, 39, 1, 459630097, 40, 83, 60, 51, 67, 16, 96, 13, 131, 45, 84, 99, 54, 28, 121, 25, 128, 116, 48, 85, 57, 101, 63, 411, 410, 409, 403, 109, 105, 421, 420, 419, 418, 417, 415, 416, 402, 108, 106, 407, 107, 405,
-            # 733,
+            733,
             # 384, 385, 386, 387, 735, 739, 792, 364, 366, 456, 459,
             # 819, 820, 822,
             # 37, 38,
@@ -41,13 +42,10 @@ class UnimedController():
         try:
             urls_crawled = []
             try:
-                urls_from_repository = crawler_repository.get_items()
-                # Using SQLAlchemy Model, not Pydantic
-                urls_models = [URLsCrawled(**{**document, 'id': str(document['id'])}) for document in urls_from_repository]
-                urls_crawled = [model.url for model in urls_models]
-                print(urls_crawled)
-            except:
-                pass
+                urls_from_repository = urls_crawled_repository.get_urls()
+                urls_crawled = [model.url for model in urls_from_repository]
+            except Exception as e:
+                exit(e)
 
             for plano in planos_unimed:
                 url = []
@@ -74,7 +72,7 @@ class UnimedController():
                             continue
 
                         print("Searching: " + url_search)
-                        data = self.__get_data(url_search)
+                        data = self.__get_data('local')
                         error = data['errors']
 
                         if error:
@@ -83,30 +81,62 @@ class UnimedController():
 
                         content = data['data']
                         dentistas = content['list']
+                        now = datetime.now()
 
                         for dentista in dentistas:
-                            dentista_model = Dentista(**dentista)
-                            dentista_exist = unimed_repository.find_dentista(dentista_model.cro, dentista_model.uf_cro)
+                            address = dentista['locaisAtendimento'][0]['endereco']
 
-                            if dentista_exist != None and '_id' in dentista_exist:
-                                inserted = unimed_repository.update_dentista(
-                                    dentista_exist["_id"],
-                                    dentista_model.model_dump(exclude={'id'})
+                            if address is not None:
+                                dentista['logradouro'] = address['logradouro']
+                                dentista['bairro'] = address['bairro']
+                                dentista['cidade'] = address['cidade']
+                                dentista['uf'] = address['uf']
+                                dentista['latitude'] = address['latitude']
+                                dentista['longitude'] = address['longitude']
+
+                            phones = dentista['locaisAtendimento'][0]['telefone']
+                            if phones is not None:
+                                dentista['telefone'] = '|'.join([f"({phone['ddd']}){phone['numero']}" for phone in phones])
+
+                            areas = dentista['locaisAtendimento'][0]['areasAtuacao']
+                            if areas is not None:
+                                dentista['areas_atuacao'] = '|'.join([f"{area['descricaoAreaAtuacao']}" for area in areas])
+
+                            email = dentista['locaisAtendimento'][0]['email']
+                            if email is not None:
+                                dentista['email'] = email
+
+                            dentista['created_at'] = now
+                            dentista['data_atualizacao'] = dentista['dataAtualizacao']
+
+                            dentista.pop('locaisAtendimento')
+                            dentista.pop('dataAtualizacao')
+
+                            dentista_model = DentistaModel.model_validate(dentista)
+                            dentista_exist = dentista_repository.find_dentista(dentista_model.cro, dentista_model.cro_uf)
+
+                            dentista_exist = dentista_exist.__dict__
+                            if dentista_exist != None and 'id' in dentista_exist:
+                                inserted = dentista_repository.update_dentista(
+                                    dentista_exist["id"],
+                                    dentista_model
                                 )
                             else:
-                                inserted = unimed_repository.insert_dentista(dentista_model.model_dump(exclude={'id'}))
+                                inserted = dentista_repository.insert_dentista(dentista)
 
                         if 'quantidadePaginas' in content\
                             and content['quantidadePaginas'] is not None\
                             and page >= int(content['quantidadePaginas']):
-                            url_model = URLCrawled(**{
+                            url_model = URLCrawledModel(**{
                                 'url': url_search,
                                 'plano': plano,
                                 'latitude': str(point[0]),
                                 'longitude': str(point[1]),
-                                'pagina': page
+                                'numero_pagina': page,
+                                'created_at': now
                             })
-                            inserted = unimed_repository.save_url_crawled(url_model.model_dump(exclude={'id'}))
+                            print(url_model)
+                            inserted = urls_crawled_repository.save_url_crawled(url_model)
 
                             if inserted:
                                 urls_crawled.append(url_search)

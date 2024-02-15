@@ -1,17 +1,16 @@
 from sqlalchemy import create_engine, Column, BigInteger, String, Integer, Boolean, DateTime, PrimaryKeyConstraint
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.sql import func
 from dotenv import load_dotenv
+from api.models.unimed_model import DentistaModel
 import os
 
 load_dotenv()
 
 DATABASE_URL = os.getenv("URL_MYSQL_UNIMED")
-
 Base = declarative_base()
 
-class Dentista(Base):
+class DentistaOrm(Base):
     __tablename__ = os.getenv("UNIMED_TABLE_DENTISTAS")
 
     id = Column(BigInteger, primary_key=True, autoincrement=True)
@@ -24,7 +23,7 @@ class Dentista(Base):
     rede = Column(String(100), default=None)
     tipo_estabelecimento = Column(String(220), default=None)
     website = Column(String(100), default=None)
-    especialista = Column(Boolean, default=False)
+    especialista = Column(Integer, default=False)
     tipo_pessoa = Column(String(2), default=None)
     relacao_peradora = Column(String(8), default=None)
     vinculacao_codigo = Column(String(16), default=None)
@@ -37,11 +36,12 @@ class Dentista(Base):
     uf = Column(String(2), default=None)
     latitude = Column(String(16), nullable=False)
     longitude = Column(String(16), nullable=False)
-    areasAtuacao = Column(String(220), nullable=False)
+    areas_atuacao = Column(String(220), default=None)
     telefone = Column(String(220), nullable=False)
     email = Column(String(100), default=None)
-    created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
-    updated_at = Column(DateTime(timezone=True), onupdate=func.now(), default=None)
+    data_atualizacao = Column(DateTime(timezone=True), default=None)
+    created_at = Column(DateTime(timezone=True), nullable=False)
+    updated_at = Column(DateTime(timezone=True), default=None)
 
     __table_args__ = (
         PrimaryKeyConstraint('id', 'cro', 'cro_uf'),
@@ -49,23 +49,44 @@ class Dentista(Base):
 
 engine = create_engine(DATABASE_URL)
 Base.metadata.create_all(bind=engine)
-
+    
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 class DentistaRepository:
-    def create_item(self, item):
+    def insert_dentista(self, item: DentistaModel):
+
+        dentista_orm = DentistaOrm(**item.model_dump())
+
         db = SessionLocal()
         try:
-            db.add(item)
+            db.add(dentista_orm)
             db.commit()
-            db.refresh(item)
-            return item
+            db.refresh(dentista_orm)
+            return dentista_orm
         finally:
             db.close()
 
-    def get_item(self, item_id):
+    def update_dentista(self, id, item):
+        db = SessionLocal()
+
+        try:
+            record = db.query(DentistaOrm).filter(DentistaOrm.id == id).first()
+            if record:
+                for key, value in item.dict(exclude_unset=True).items():
+                    setattr(record, key, value)
+                db.commit()
+                db.refresh(record)
+
+            return record
+        finally:
+            db.close()
+
+    def find_dentista(self, cro, cro_uf):
         db = SessionLocal()
         try:
-            return db.query(Dentista).filter(Dentista.id == item_id).first()
+            return db.query(DentistaOrm).filter(
+                DentistaOrm.cro == cro,
+                DentistaOrm.cro_uf == cro_uf
+            ).first()
         finally:
             db.close()
