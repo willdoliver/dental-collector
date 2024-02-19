@@ -34,8 +34,8 @@ class DentistaOrm(Base):
     bairro = Column(String(64), default=None)
     cidade = Column(String(64), default=None)
     uf = Column(String(2), default=None)
-    latitude = Column(String(16), nullable=False)
-    longitude = Column(String(16), nullable=False)
+    latitude = Column(String(32), nullable=False)
+    longitude = Column(String(32), nullable=False)
     areas_atuacao = Column(String(220), default=None)
     telefone = Column(String(220), nullable=False)
     email = Column(String(100), default=None)
@@ -49,8 +49,7 @@ class DentistaOrm(Base):
 
 engine = create_engine(DATABASE_URL)
 Base.metadata.create_all(bind=engine)
-    
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+SessionLocal = sessionmaker(autoflush=True, bind=engine)
 
 class DentistaRepository:
     def insert_dentista(self, item: DentistaModel):
@@ -68,16 +67,15 @@ class DentistaRepository:
 
     def update_dentista(self, id, item):
         db = SessionLocal()
-
         try:
-            record = db.query(DentistaOrm).filter(DentistaOrm.id == id).first()
-            if record:
+            dentista_orm = db.query(DentistaOrm).filter(DentistaOrm.id == id).first()
+            if dentista_orm:
                 for key, value in item.dict(exclude_unset=True).items():
-                    setattr(record, key, value)
+                    setattr(dentista_orm, key, value)
                 db.commit()
-                db.refresh(record)
+                db.refresh(dentista_orm)
 
-            return record
+            return dentista_orm
         finally:
             db.close()
 
@@ -88,5 +86,12 @@ class DentistaRepository:
                 DentistaOrm.cro == cro,
                 DentistaOrm.cro_uf == cro_uf
             ).first()
+        finally:
+            db.close()
+
+    def find_dentistas(self):
+        db = SessionLocal()
+        try:
+            return db.query(DentistaOrm).all()
         finally:
             db.close()

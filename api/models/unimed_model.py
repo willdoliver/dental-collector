@@ -5,7 +5,7 @@ from datetime import datetime
 class DentistaModel(BaseModel):
     id: Optional[int] = None
     nome: str
-    cro: str = Field(max_length=6, pattern=r'^\d*$')
+    cro: str = Field(max_length=16)
     cro_uf: str = Field(max_length=2, alias='ufCro')
     codigo_prestador: str | None = Field(alias="codigoPrestador")
     cpf_cnpj: str | None = Field(pattern=r'^\d*$', alias="cpfCnpj")

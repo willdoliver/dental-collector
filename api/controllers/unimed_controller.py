@@ -1,4 +1,5 @@
 import os
+import traceback, logging
 import requests, json, time, random
 from dotenv import load_dotenv
 from datetime import datetime
@@ -8,10 +9,12 @@ from selenium.webdriver.support import expected_conditions as EC
 from api.models.unimed_model import DentistaModel, URLCrawledModel
 from api.repositories.unimed.dentista_repository import DentistaRepository, DentistaOrm
 from api.repositories.unimed.urls_crawled_repository import URLsCrawledRepository, URLsCrawledOrm
+from api.controllers.search_points import SearchPoints
 
 load_dotenv()
 urls_crawled_repository = URLsCrawledRepository()
 dentista_repository = DentistaRepository()
+search_points = SearchPoints()
 
 class UnimedController():
 
@@ -23,8 +26,7 @@ class UnimedController():
             # 825, 826, 827, 828,
             # 730, 731, 732, 322, 323, 324,
             # 459643099, 78, 459649098, 75, 459637094, 459640094, 459631095, 111, 459633091, 348, 344, 343, 342, 11, 8, 70, 5, 114, 102, 119, 43, 2, 133, 112, 41, 117, 120, 61, 52, 17, 77, 14, 79, 46, 80, 66, 55, 81, 29, 124, 110, 26, 49, 74, 58, 82, 408,
-            # 459645095,
-            # 459648090, 459642091, 19, 31, 459636096, 459639091, 98, 459632093, 338, 333, 334, 821, 455, 461, 786, 728, 727, 823, 396, 393, 399, 395, 400, 392, 398, 397, 401, 394, 10, 7, 132, 4, 125, 113, 129, 39, 1, 459630097, 40, 83, 60, 51, 67, 16, 96, 13, 131, 45, 84, 99, 54, 28, 121, 25, 128, 116, 48, 85, 57, 101, 63, 411, 410, 409, 403, 109, 105, 421, 420, 419, 418, 417, 415, 416, 402, 108, 106, 407, 107, 405,
+            # 459645095, 459648090, 459642091, 19, 31, 459636096, 459639091, 98, 459632093, 338, 333, 334, 821, 455, 461, 786, 728, 727, 823, 396, 393, 399, 395, 400, 392, 398, 397, 401, 394, 10, 7, 132, 4, 125, 113, 129, 39, 1, 459630097, 40, 83, 60, 51, 67, 16, 96, 13, 131, 45, 84, 99, 54, 28, 121, 25, 128, 116, 48, 85, 57, 101, 63, 411, 410, 409, 403, 109, 105, 421, 420, 419, 418, 417, 415, 416, 402, 108, 106, 407, 107, 405,
             733,
             # 384, 385, 386, 387, 735, 739, 792, 364, 366, 456, 459,
             # 819, 820, 822,
@@ -35,9 +37,8 @@ class UnimedController():
             # 782, 781, 783, 793, 780,
         ]
 
-        points = [
-            (-25.530635, -48.529835)
-        ]
+        # points = [(-25.530635, -48.529835)]
+        points = search_points.get_brazil_search_points()
 
         try:
             urls_crawled = []
@@ -45,7 +46,9 @@ class UnimedController():
                 urls_from_repository = urls_crawled_repository.get_urls()
                 urls_crawled = [model.url for model in urls_from_repository]
             except Exception as e:
-                exit(e)
+                full_traceback = traceback.format_exc()
+                logging.error(f"Exception occurred: {full_traceback}")
+                return {'msg': e}
 
             for plano in planos_unimed:
                 url = []
@@ -69,10 +72,10 @@ class UnimedController():
                         if url_search in urls_crawled:
                             print("Skipping: " + url_search)
                             page += 1
-                            continue
+                            break
 
                         print("Searching: " + url_search)
-                        data = self.__get_data('local')
+                        data = self.__get_data(url_search)
                         error = data['errors']
 
                         if error:
@@ -84,6 +87,7 @@ class UnimedController():
                         now = datetime.now()
 
                         for dentista in dentistas:
+                            dentista = {key: value.strip() if isinstance(value, str) else value for key, value in dentista.items()}
                             address = dentista['locaisAtendimento'][0]['endereco']
 
                             if address is not None:
@@ -106,27 +110,30 @@ class UnimedController():
                             if email is not None:
                                 dentista['email'] = email
 
-                            dentista['created_at'] = now
                             dentista['data_atualizacao'] = dentista['dataAtualizacao']
 
                             dentista.pop('locaisAtendimento')
                             dentista.pop('dataAtualizacao')
 
-                            dentista_model = DentistaModel.model_validate(dentista)
-                            dentista_exist = dentista_repository.find_dentista(dentista_model.cro, dentista_model.cro_uf)
+                            dentista_exist = dentista_repository.find_dentista(dentista['cro'], dentista['ufCro'])
 
-                            dentista_exist = dentista_exist.__dict__
-                            if dentista_exist != None and 'id' in dentista_exist:
+                            if dentista_exist != None:
+                                dentista_exist = dentista_exist.__dict__
+                                dentista['updated_at'] = now
+                                dentista_model = DentistaModel.model_validate(dentista)
+
                                 inserted = dentista_repository.update_dentista(
                                     dentista_exist["id"],
                                     dentista_model
                                 )
                             else:
-                                inserted = dentista_repository.insert_dentista(dentista)
+                                dentista['created_at'] = now
+                                dentista_model = DentistaModel.model_validate(dentista)
+                                inserted = dentista_repository.insert_dentista(dentista_model)
 
                         if 'quantidadePaginas' in content\
-                            and content['quantidadePaginas'] is not None\
-                            and page >= int(content['quantidadePaginas']):
+                            and content['quantidadePaginas'] is not None:
+
                             url_model = URLCrawledModel(**{
                                 'url': url_search,
                                 'plano': plano,
@@ -135,14 +142,22 @@ class UnimedController():
                                 'numero_pagina': page,
                                 'created_at': now
                             })
-                            print(url_model)
-                            inserted = urls_crawled_repository.save_url_crawled(url_model)
 
-                            if inserted:
-                                urls_crawled.append(url_search)
+                            time.sleep(random.randint(11, 30))
+                            if page <= int(content['quantidadePaginas']):
+                                inserted = urls_crawled_repository.save_url_crawled(url_model)
+                                if inserted:
+                                    urls_crawled.append(url_search)
 
-                            time.sleep(random.randint(9, 30))
-                            break
+                                # Dont search for next inexisting page
+                                if page == int(content['quantidadePaginas']):
+                                    break
+                                else:
+                                    page += 1
+                                    continue
+                                
+                            else:
+                                break
                         elif 'quantidadePaginas' in content and content['quantidadePaginas'] is None:
                             break
                         else:
@@ -150,14 +165,16 @@ class UnimedController():
                             continue
             return {'msg': 'ok'}
         except Exception as e:
-            return {'msg': str(e)}
+            full_traceback = traceback.format_exc()
+            logging.error(f"Exception occurred: {full_traceback}")
+            return {'msg': e}
 
     def get_dentistas_unimed(self):
         content = {}
         try:
-            dentistas = unimed_repository.find_dentistas()
+            dentistas = dentista_repository.find_dentistas()
 
-            dentista_model = [Dentista(**{**dentista, '_id': str(dentista['_id'])}) for dentista in dentistas]
+            dentista_model = [DentistaModel(**dentista) for dentista in dentistas]
 
             content['status'] = True
             content['count'] = len(dentista_model)
@@ -165,20 +182,27 @@ class UnimedController():
         except Exception as e:
             content['status'] = False
             content['msg'] = str(e)
-            print(e)
+
+            full_traceback = traceback.format_exc()
+            logging.error(f"Exception occurred: {full_traceback}")
+            return {'msg': e}
 
         return content
 
     def get_dentista_unimed(self, cro_num, cro_uf):
         content = {}
-        try:
-            dentistas = unimed_repository.find_dentista(cro_num, cro_uf)
 
-            dentista_model = [Dentista(**{**dentista, '_id': str(dentista['_id'])}) for dentista in dentistas]
+        try:
+            dentistas = dentista_repository.find_dentista(cro_num, cro_uf)
+
+            if dentistas is None:
+                content['msg'] = "Dentista CRO:%s UF:%s não encontrado!" % (cro_num, cro_uf)
+            else:
+                dentista_model = [DentistaModel(**dentista) for dentista in dentistas]
+                content['count'] = len(dentista_model)
+                content['data'] = dentista_model
 
             content['status'] = True
-            content['count'] = len(dentista_model)
-            content['data'] = dentista_model
         except Exception as e:
             content['status'] = False
             content['msg'] = str(e)
@@ -199,7 +223,7 @@ class UnimedController():
 
     def update_unimed_urls(self):
         try:
-            documents = unimed_repository.get_urls()
+            documents = urls_crawled_repository.get_urls()
 
             elements_updated = 0
             for document in documents:
@@ -219,12 +243,13 @@ class UnimedController():
                 }
                 print(data_to_update)
 
-                result = unimed_repository.update_url(document_id, data_to_update)
+                result = urls_crawled_repository.update_url(document_id, data_to_update)
 
                 print('Update result: '+ str(result.modified_count))
                 elements_updated += 1
 
             return str(elements_updated) +' documents updated successfully', 200
         except Exception as e:
-            print(str(e))
-            return 'Internal Server Error', 500
+            full_traceback = traceback.format_exc()
+            logging.error(f"Exception occurred: {full_traceback}")
+            return {'msg': e}

@@ -19,8 +19,8 @@ class URLsCrawledOrm(Base):
 
     id = Column(BigInteger, primary_key=True, autoincrement=True)
     url = Column(String(220), nullable=False)
-    latitude = Column(String(16), nullable=False)
-    longitude = Column(String(16), nullable=False)
+    latitude = Column(String(32), nullable=False)
+    longitude = Column(String(32), nullable=False)
     numero_pagina = Column(Integer, nullable=False)
     plano = Column(String(32), primary_key=True, nullable=False)
     created_at = Column(DateTime(timezone=True), nullable=False)
@@ -46,6 +46,21 @@ class URLsCrawledRepository:
             db.commit()
             db.refresh(urls_crawled_orm)
             return urls_crawled_orm
+        finally:
+            db.close()
+    
+    def update_url(id, item):
+        db = SessionLocal()
+
+        try:
+            record = db.query(URLsCrawledOrm).filter(URLsCrawledOrm.id == id).first()
+            if record:
+                for key, value in item.dict(exclude_unset=True).items():
+                    setattr(record, key, value)
+                db.commit()
+                db.refresh(record)
+
+            return record
         finally:
             db.close()
 
