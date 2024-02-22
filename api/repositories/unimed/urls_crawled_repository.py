@@ -10,7 +10,7 @@ from pydantic import BaseModel, ConfigDict
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("URL_MYSQL_UNIMED")
+DATABASE_URL = os.getenv("URI_MYSQL")
 
 Base = declarative_base()
 

@@ -3,12 +3,9 @@ import traceback, logging
 import requests, json, time, random
 from dotenv import load_dotenv
 from datetime import datetime
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from api.models.unimed_model import DentistaModel, URLCrawledModel
-from api.repositories.unimed.dentista_repository import DentistaRepository, DentistaOrm
-from api.repositories.unimed.urls_crawled_repository import URLsCrawledRepository, URLsCrawledOrm
+from api.repositories.unimed.dentista_repository import DentistaRepository
+from api.repositories.unimed.urls_crawled_repository import URLsCrawledRepository
 from api.controllers.search_points import SearchPoints
 
 load_dotenv()

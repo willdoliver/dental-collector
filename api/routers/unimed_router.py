@@ -1,4 +1,3 @@
-from fastapi import APIRouter
 from api.controllers.unimed_controller import UnimedController
 from api.controllers.search_points import SearchPoints
 from fastapi import APIRouter, Depends

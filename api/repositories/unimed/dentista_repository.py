@@ -7,7 +7,7 @@ import os
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("URL_MYSQL_UNIMED")
+DATABASE_URL = os.getenv("URI_MYSQL")
 Base = declarative_base()
 
 class DentistaOrm(Base):
@@ -25,7 +25,7 @@ class DentistaOrm(Base):
     website = Column(String(100), default=None)
     especialista = Column(Integer, default=False)
     tipo_pessoa = Column(String(2), default=None)
-    relacao_peradora = Column(String(8), default=None)
+    relacao_operadora = Column(String(8), default=None)
     vinculacao_codigo = Column(String(16), default=None)
     vinculacao_nome = Column(String(220), default=None)
     vinculacao_razao_social = Column(String(220), default=None)

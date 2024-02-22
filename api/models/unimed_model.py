@@ -1,4 +1,4 @@
-from typing import Optional, Union
+from typing import Optional
 from pydantic import BaseModel, Field
 from datetime import datetime
 
@@ -15,7 +15,7 @@ class DentistaModel(BaseModel):
     website: str | None
     especialista: int = None
     tipo_pessoa: str | None = Field(max_length=2, alias="tipoPessoa")
-    relacao_peradora: str | None = Field(alias="relacaoOperadora")
+    relacao_operadora: str | None = Field(alias="relacaoOperadora")
     vinculacao_codigo: str | None = Field(alias="vinculacaoCodigo")
     vinculacao_nome: str | None = Field(alias="vinculacaoNome")
     vinculacao_razao_social: str | None = Field(alias="vinculacaoRazaoSocial")
