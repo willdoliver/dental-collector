@@ -48,14 +48,20 @@ class MetLifeController():
 
             for uf_index in range(len(ufs)):
                 if uf_index + 1 < len(ufs): # avoid out of index
-                    uf = ufs[uf_index+2].text
+                    try:
+                        uf = ufs[uf_index+1].text
+                    except:
+                        print('stale in state')
+                        ufs, uf_element = self.get_ufs(driver)
+                        uf = ufs[uf_index+1].text
+
                     print(uf)
 
                     # TODO: Remove
-                    if uf in ['AL', 'AM', 'AP', 'BA']:
+                    if uf in ['AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE']:
                         continue
 
-                    uf_element.select_by_index(uf_index+2)
+                    uf_element.select_by_index(uf_index+1)
 
                     cities, city_element = self.get_cities(driver)
                     now = datetime.now()
@@ -65,29 +71,23 @@ class MetLifeController():
 
                     for city_index in range(len(cities)):
                         if city_index + 1 < len(cities): # avoid out of index
-                            city = cities[city_index+1].text
-
-                            if city in [
-                                'ACOPIARA',
-                                'AQUIRAZ',
-                                'ARACATI',
-                                'BOA VIAGEM',
-                                'CAMOCIM',
-                                'CASCAVEL',
-                                'CAUCAIA',
-                                'CEDRO',
-                                'CRATEÚS',
-                                'CRATO',
-                                'EUSÉBIO',
-                            ]:
-                                continue
+                            try:
+                                city = cities[city_index+1].text
+                            except:
+                                print('stale in city')
+                                cities, city_element = self.get_cities(driver)
+                                city = cities[city_index+1].text
 
                             print(uf, " - ", city)
                             city_element.select_by_index(city_index+1)
 
                             time.sleep(2)
-                            search = driver.find_element(By.ID, "btnBuscaAvancada")
-                            search.click()
+                            try:
+                                search = driver.find_element(By.ID, "btnBuscaAvancada")
+                                search.click()
+                            except Exception as e:
+                                print('Refreshing page 1')
+                                self.refresh_page(driver, uf_index, city_index)
 
                             try:
                                 WebDriverWait(driver, 10).until(
@@ -96,14 +96,14 @@ class MetLifeController():
                             except TimeoutException as e:
                                 city_done = summary_data_repository.find_data(uf, city)
                                 if city_done == None:
-                                    self.add_summary_data(uf, city, 0)
+                                    self.add_summary_data(uf, city)
                                     continue
                                 else:
                                     continue
 
                             except UnexpectedAlertPresentException as e:
-                                print('Refreshing page')
-                                self.refresh_page(driver, uf_index, city_index)
+                                print('Aborting city')
+                                self.add_summary_data(uf, city)
                                 continue
 
                             except Exception as e:
@@ -111,17 +111,15 @@ class MetLifeController():
                                 logging.error(f"divResultado error: {full_traceback}")
                                 continue
 
-
                             result_prev = driver.find_element(By.ID, "divResultado")
                             result_prev = result_prev.text
-                            print("result_prev: ", str(result_prev))                        
+                            print("result_prev: ", str(result_prev))
 
                             try:
                                 count_dentistas = int(result_prev.split(' ')[-2])
                                 print("count_dentistas: ", str(count_dentistas))
 
                                 city_done = summary_data_repository.find_data(uf, city)
-
                                 if city_done != None:
                                     city_done = city_done.__dict__
                                     if city_done['count_dentistas'] == count_dentistas:
@@ -153,31 +151,30 @@ class MetLifeController():
                                         print({'msg': e})
                                         pass
 
-                                    count_pagination_new = self.get_count_pagination(driver)
+                                    count_pagination_old = count_pagination
+                                    count_pagination = self.get_count_pagination(driver)
+                                    print(f'Debug {count_pagination_old} - {count_pagination} - {count}')
 
-                                    if count_pagination_new == count_dentistas:
+                                    if count_pagination == count_dentistas:
                                         pass
 
-                                    if count_pagination == count_pagination_new or count_pagination_new == 0:
-                                        count_pagination = count_pagination_new
+                                    if count_pagination == count_pagination_old or count_pagination == 0:
                                         count += 1
-                                    else:
-                                        count = 0
 
                                 while True:
                                     if len(driver.find_elements(By.CLASS_NAME, "liList")) < count_dentistas:
                                         print('waiting data...')
                                         time.sleep(1)
-                                    else:
-                                        break
 
                                     if count == 10: # Not possible to load all from page, save the current data
                                         pass
+                                    else:
+                                        break
 
                                 dentistas = driver.find_elements(By.CLASS_NAME, "liList")
 
                                 for dentista in dentistas:
-                                    print("dentista.text: ", dentista.text)
+                                    # print("dentista.text: ", dentista.text)
                                     dentista_data = dentista.text.split('\n')
                                     print(dentista_data)
 
@@ -224,7 +221,6 @@ class MetLifeController():
                                 full_traceback = traceback.format_exc()
                                 logging.error(f"An error occurred in data collection flow: {full_traceback}")
                                 return {'msg': e}
-                            
 
         except WebDriverException as e:
             print(f"An Web Driver Error occurred: {e}")
@@ -248,10 +244,10 @@ class MetLifeController():
         except Exception as e:
             full_traceback = traceback.format_exc()
             logging.error(f"liButtonMais error: {full_traceback}")
-            # print({'msg': e})
+            print({'msg': e})
             return 0
 
-    def add_summary_data(self, uf, city, count_dentistas):
+    def add_summary_data(self, uf, city, count_dentistas = 0):
         summary_data = SummaryDataModel(**{
             'uf': uf,
             'cidade': city,
@@ -263,8 +259,6 @@ class MetLifeController():
         summary_inserted = summary_data_repository.insert_data(summary_data_model)
 
     def select_todos(self, driver):
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "btnBuscaAvancada")))
-
         plano_element = driver.find_element(By.ID, "optPlano")
         plano_element = Select(plano_element)
         plano_element.select_by_index(1)
@@ -312,7 +306,7 @@ class MetLifeController():
         ufs, uf_element = self.get_ufs(driver)
         time.sleep(3)
 
-        uf_element.select_by_index(uf_index+2)
+        uf_element.select_by_index(uf_index+1)
         time.sleep(3)
 
         print('getting cities')
@@ -322,4 +316,9 @@ class MetLifeController():
         print('selecting city')
         city_element.select_by_index(city_index+1)
         time.sleep(3)
-        print('done except')
+
+        print('click to search again')
+        search = driver.find_element(By.ID, "btnBuscaAvancada")
+        search.click()
+        time.sleep(3)
+        print('refresh done')
