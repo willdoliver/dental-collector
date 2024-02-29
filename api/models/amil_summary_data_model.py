@@ -18,6 +18,6 @@ class SummaryDataModel(BaseModel):
             "example": {
                 "uf": "PR",
                 "cidade": "Curitiba",
-                "count_dentistas": "48",
+                "count_dentistas": "51",
             }
         }

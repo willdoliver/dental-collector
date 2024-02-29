@@ -4,6 +4,8 @@ from fastapi import Depends, FastAPI
 from .dependencies import get_query_token, get_token_header
 from .routers.unimed_router import *
 from .routers.metlife_router import *
+from .routers.amil_router import *
+from .routers.uniodonto_router import *
 
 app = FastAPI()
 
