@@ -4,6 +4,7 @@ import traceback, logging
 from datetime import datetime
 from bs4 import BeautifulSoup
 
+import random
 import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -49,7 +50,7 @@ class UniodontoController():
 
                     city_done = summary_data_repository.find_data(uf, city_name)
                     if city_done is not None:
-                        print("Skipping")
+                        print("Skipping city...")
                         continue
 
                     now = datetime.now()
@@ -97,7 +98,6 @@ class UniodontoController():
 
                                 updated = uniodonto_repository.update_dentista(
                                     dentista_exist["id"],
-                                    dentista_exist["especialidade"],
                                     dentista_model
                                 )
                             else:
@@ -125,7 +125,7 @@ class UniodontoController():
                             }
                             summary_data_model = SummaryDataModel.model_validate(summary_data)
                             data_inserted = summary_data_repository.insert_data(summary_data_model)
-                        time.sleep(2)
+                        time.sleep(random.randint(2,4))
 
                         page += 1
                         if len(list_group_items) == 0:

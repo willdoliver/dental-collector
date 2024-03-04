@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, Column, BigInteger, String, Integer, Boole
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv
-from api.models.uniodonto_model import DentistaModel
+from api.models.odontoprev_model import DentistaModel
 import os
 
 load_dotenv()
@@ -11,7 +11,7 @@ DATABASE_URL = os.getenv("URI_MYSQL")
 Base = declarative_base()
 
 class DentistaOrm(Base):
-    __tablename__ = os.getenv("UNIODONTO_TABLE_DENTISTAS")
+    __tablename__ = os.getenv("ODONTOPREV_TABLE_DENTISTAS")
 
     id = Column(BigInteger, primary_key=True, autoincrement=True)
     nome = Column(String(220), nullable=False)

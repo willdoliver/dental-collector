@@ -41,7 +41,7 @@ class AmilController():
 
                     city_done = summary_data_repository.find_data(uf, city)
                     if (city_done is not None):
-                        print("Skipping...")
+                        print("Skipping city...")
                         continue
 
                     especialidades = self.get_especialidades(uf, city, "TODOS OS BAIRROS")

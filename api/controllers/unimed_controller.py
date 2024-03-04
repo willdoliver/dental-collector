@@ -67,7 +67,7 @@ class UnimedController():
                         url_search = url_point + '&numeroPagina='+str(page)
 
                         if url_search in urls_crawled:
-                            print("Skipping: " + url_search)
+                            print("Skipping city: " + url_search)
                             page += 1
                             break
 
