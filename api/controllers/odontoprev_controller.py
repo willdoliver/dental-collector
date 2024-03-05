@@ -1,24 +1,20 @@
 import time
-import requests, json
 import traceback, logging
 from datetime import datetime
 from bs4 import BeautifulSoup
-
 import random
 import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait, Select
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import Select
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.alert import Alert
-from selenium.common.exceptions import WebDriverException, TimeoutException, UnexpectedAlertPresentException, NoSuchElementException
 from selenium.webdriver.chrome.options import Options
-
 from api.models.odontoprev_model import DentistaModel
 from api.models.odontoprev_summary_data_model import SummaryDataModel
 from api.repositories.odontoprev.odontoprev_dentistas_repository import DentistaRepository
 from api.repositories.odontoprev.odontoprev_sumary_data_repository import SummaryDataRepository
+from api.helpers.logger_message_helper import LoggerMessageHelper
+from api.helpers.logfile_helper import LogfileHelper
 from dotenv import load_dotenv
 
 chrome_opt = Options()
@@ -39,6 +35,9 @@ class OdontoprevController():
         }
 
     def find_dentistas_from_odontoprev(self):
+        log_file = LogfileHelper.get_log_file('odontoprev')
+        LoggerMessageHelper.log_message(log_file, 'Started')
+
         chromedriver_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'driver', os.getenv('CHROMEDRIVERFILE'))
         service = Service(executable_path=chromedriver_path)
         driver = webdriver.Chrome(service=service, options=chrome_opt)
@@ -47,20 +46,24 @@ class OdontoprevController():
             driver.get('https://www.odontoprev.com.br/redecredenciada/selecaoUf?cdMarca=1&produtoAns=428329320')
             ufs = self.get_ufs(driver)
             print(ufs)
+            LoggerMessageHelper.log_message(log_file, ufs)
 
             for uf in ufs:
                 print(uf)
+                LoggerMessageHelper.log_message(log_file, uf)
 
                 driver.get(f'https://www.odontoprev.com.br/redecredenciada/selecaoLocal?cdMarca=1&produtoAns=428329320&token=&pesquisaP=false&uf={uf}')
                 cities = self.get_cities(driver)
 
                 for city_key, city_name in cities.items():
                     print(uf, ' - ', city_name)
+                    LoggerMessageHelper.log_message(log_file, uf + ' - ' + city_name)
                     count_dentistas_city = 0
 
                     city_done = self.get_city_done(uf, city_name)
                     if city_done is not None:
-                        print("Skipping city")
+                        print('Skipping city')
+                        LoggerMessageHelper.log_message(log_file, 'Skipping city')
                         continue
 
                     driver.get(f'https://www.odontoprev.com.br/redecredenciada/buscaRedeCredenciada?cdMarca=1&produtoAns=427893720&uf={uf}&token=&pesquisaP=false&municipio={city_key}&especialidade=0&bairro=0')
@@ -68,21 +71,23 @@ class OdontoprevController():
                     soup = BeautifulSoup(driver.page_source, 'html.parser')
                     table_list = soup.find_all('table', {'cellspacing': '0'})
 
-                    # print(table_list)
                     for i in range(len(table_list)):
                         item = table_list[i]
                         print(f"Index: {i}, Value: {item}")
+                        LoggerMessageHelper.log_message(log_file, f"Index: {i}, Value: {item}")
 
                         dentista_data = self.format_dentista_data(item)
 
                         if dentista_data == {}:
-                            print("Problem formatting dentista data!")
+                            print('Problem formatting dentista data!')
+                            LoggerMessageHelper.log_message(log_file, 'Problem formatting dentista data!')
                             continue
                         else:
                             dentista_data['uf'] = uf
                             dentista_data['cidade'] = city_name
                             count_dentistas_city += 1
                         print(dentista_data)
+                        LoggerMessageHelper.log_message(log_file, dentista_data)
                         
                         dentista_exist = odontoprev_repository.find_dentista(
                             dentista_data['cro'],
@@ -112,29 +117,61 @@ class OdontoprevController():
             full_traceback = traceback.format_exc()
             logging.error(f'except error: {full_traceback}')
 
+            LoggerMessageHelper.log_message(
+                log_file,
+                f'except error: {full_traceback}'
+            )
+
         finally:
-            print('finish')
+            print('Finish')
+            LoggerMessageHelper.log_message(log_file, 'Finish')
 
     def get_ufs(self, driver):
-        ufs_options = Select(driver.find_element(By.ID, 'cboUf'))
-        ufs = [option.get_attribute('value') for option in ufs_options.options if option.get_attribute('value')]
-        # print(ufs)
-        return ufs
+        try:
+            ufs_options = Select(driver.find_element(By.ID, 'cboUf'))
+            ufs = [option.get_attribute('value') for option in ufs_options.options if option.get_attribute('value')]
+            return ufs
+        except Exception as e:
+            full_traceback = traceback.format_exc()
+            logging.error(f'except get_ufs error: {full_traceback}')
+
+            LoggerMessageHelper.log_message(
+                LogfileHelper.get_log_file('odontoprev'),
+                f'except get_ufs error: {full_traceback}'
+            )
 
     def get_cities(self, driver):
-        cities = {}
-        cities_options = Select(driver.find_element(By.ID, 'municipio'))
+        try:
+            cities = {}
+            cities_options = Select(driver.find_element(By.ID, 'municipio'))
 
-        for option in cities_options.options:
-            if (option.get_attribute('value') == '0'):
-                continue
-            cities[option.get_attribute('value')] = option.get_attribute('text')
+            for option in cities_options.options:
+                if (option.get_attribute('value') == '0'):
+                    continue
+                cities[option.get_attribute('value')] = option.get_attribute('text')
 
-        return cities
+            return cities
+        except Exception as e:
+            full_traceback = traceback.format_exc()
+            logging.error(f'except get_cities error: {full_traceback}')
+
+            LoggerMessageHelper.log_message(
+                LogfileHelper.get_log_file('odontoprev'),
+                f'except get_cities error: {full_traceback}'
+            )
 
     def get_city_done(self, uf, city):
-        return summary_data_repository.find_data(uf, city)
-    
+        try:
+            return summary_data_repository.find_data(uf, city)
+        except Exception as e:
+            full_traceback = traceback.format_exc()
+            logging.error(f'except get_city_done error: {full_traceback}')
+
+            LoggerMessageHelper.log_message(
+                LogfileHelper.get_log_file('odontoprev'),
+                f'except get_city_done error: {full_traceback}'
+            )
+
     def save_city_done(self, uf, city, count_dentistas):
         try:
             now = datetime.now()
@@ -165,6 +202,11 @@ class OdontoprevController():
         except Exception as e:
             full_traceback = traceback.format_exc()
             logging.error(f'except save_city_done error: {full_traceback}')
+
+            LoggerMessageHelper.log_message(
+                LogfileHelper.get_log_file('odontoprev'),
+                f'except save_city_done error: {full_traceback}'
+            )
 
     def format_dentista_data(self, item):
         try:
@@ -199,6 +241,11 @@ class OdontoprevController():
 
         except Exception as e:
             full_traceback = traceback.format_exc()
-            logging.error(f"except format_dentista_data error: {full_traceback}")
-            return {}
+            logging.error(f'except format_dentista_data error: {full_traceback}')
 
+            LoggerMessageHelper.log_message(
+                LogfileHelper.get_log_file('odontoprev'),
+                f'except format_dentista_data error: {full_traceback}'
+            )
+
+            return {}

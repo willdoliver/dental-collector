@@ -1,7 +1,6 @@
 import os
 import re
 import time
-import random
 import traceback, logging
 from datetime import datetime
 from selenium import webdriver
@@ -10,21 +9,19 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.alert import Alert
-from selenium.common.exceptions import WebDriverException, TimeoutException, UnexpectedAlertPresentException, NoSuchElementException
+from selenium.common.exceptions import WebDriverException, TimeoutException, UnexpectedAlertPresentException
 from api.models.metlife_model import DentistaModel
 from api.models.metlife_summary_data_model import SummaryDataModel
 from api.repositories.metlife.metlife_dentistas_repository import DentistaRepository
 from api.repositories.metlife.metlife_sumary_data_repository import SummaryDataRepository
+from api.helpers.logger_message_helper import LoggerMessageHelper
+from api.helpers.logfile_helper import LogfileHelper
 from dotenv import load_dotenv
 
 from selenium.webdriver.chrome.options import Options
 chrome_opt = Options()
-# chrome_opt.add_experimental_option("detach", True)
 
-# chrome_opt = webdriver.ChromeOptions()
 chrome_opt.add_argument('--headless')
-# chrome_opt.add_argument('--disable-popup-blocking')
-# chrome_opt.add_argument('--disable-extensions')
 chrome_opt.add_argument('--disable-gpu')
 chrome_opt.add_argument('--no-sandbox')
 
@@ -35,6 +32,9 @@ summary_data_repository = SummaryDataRepository()
 class MetLifeController():
 
     def find_dentistas_from_metlife(self):
+        log_file = LogfileHelper.get_log_file('metlife')
+        LoggerMessageHelper.log_message(log_file, 'Started')
+        
         chromedriver_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'driver', os.getenv('CHROMEDRIVERFILE'))
         service = Service(executable_path=chromedriver_path)
         driver = webdriver.Chrome(service=service, options=chrome_opt)
@@ -52,10 +52,12 @@ class MetLifeController():
                         uf = ufs[uf_index+1].text
                     except:
                         print('stale in state')
+                        LoggerMessageHelper.log_message(log_file, 'stale in state')
                         ufs, uf_element = self.get_ufs(driver)
                         uf = ufs[uf_index+1].text
 
                     print(uf)
+                    LoggerMessageHelper.log_message(log_file, uf)
 
                     # TODO: Remove
                     if uf in ['AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE']:
@@ -75,10 +77,12 @@ class MetLifeController():
                                 city = cities[city_index+1].text
                             except:
                                 print('stale in city')
+                                LoggerMessageHelper.log_message(log_file, 'stale in city')
                                 cities, city_element = self.get_cities(driver)
                                 city = cities[city_index+1].text
 
-                            print(uf, " - ", city)
+                            print(uf + " - " + city)
+                            LoggerMessageHelper.log_message(log_file, uf + " - " + city)
                             city_element.select_by_index(city_index+1)
 
                             time.sleep(2)
@@ -87,6 +91,7 @@ class MetLifeController():
                                 search.click()
                             except Exception as e:
                                 print('Refreshing page 1')
+                                LoggerMessageHelper.log_message(log_file, 'Refreshing page 1')
                                 self.refresh_page(driver, uf_index, city_index)
 
                             try:
@@ -103,30 +108,36 @@ class MetLifeController():
 
                             except UnexpectedAlertPresentException as e:
                                 print('Aborting city')
+                                LoggerMessageHelper.log_message(log_file, 'Aborting city')
                                 self.add_summary_data(uf, city)
                                 continue
 
                             except Exception as e:
                                 full_traceback = traceback.format_exc()
                                 logging.error(f"divResultado error: {full_traceback}")
+                                LoggerMessageHelper.log_message(log_file, f"divResultado error: {full_traceback}")
                                 continue
 
                             result_prev = driver.find_element(By.ID, "divResultado")
                             result_prev = result_prev.text
-                            print("result_prev: ", str(result_prev))
+                            print('result_prev: ', str(result_prev))
+                            LoggerMessageHelper.log_message(log_file, 'result_prev: '+ str(result_prev))
 
                             try:
                                 count_dentistas = int(result_prev.split(' ')[-2])
                                 print("count_dentistas: ", str(count_dentistas))
+                                LoggerMessageHelper.log_message(log_file, 'count_dentistas: '+ str(count_dentistas))
 
                                 city_done = summary_data_repository.find_data(uf, city)
                                 if city_done != None:
                                     city_done = city_done.__dict__
                                     if city_done['count_dentistas'] == count_dentistas:
                                         print('Skipping city...')
+                                        LoggerMessageHelper.log_message(log_file, 'Skipping city')
                                         continue
                                     else:
                                         print('In database: ', str(city_done['count_dentistas']))
+                                        LoggerMessageHelper.log_message(log_file, 'In database: ', str(city_done['count_dentistas']))
 
                                 WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "liButtonMais")))
                                 count_pagination = self.get_count_pagination(driver)
@@ -149,11 +160,13 @@ class MetLifeController():
                                         full_traceback = traceback.format_exc()
                                         logging.error(f"btnMaisResultados error: {full_traceback}")
                                         print({'msg': e})
+                                        LoggerMessageHelper.log_message(log_file, 'msg: '+ e)
                                         pass
 
                                     count_pagination_old = count_pagination
                                     count_pagination = self.get_count_pagination(driver)
                                     print(f'Debug {count_pagination_old} - {count_pagination} - {count}')
+                                    LoggerMessageHelper.log_message(log_file, f'Debug {count_pagination_old} - {count_pagination} - {count}')
 
                                     if count_pagination == count_dentistas:
                                         pass
@@ -164,6 +177,7 @@ class MetLifeController():
                                 while True:
                                     if len(driver.find_elements(By.CLASS_NAME, "liList")) < count_dentistas:
                                         print('waiting data...')
+                                        LoggerMessageHelper.log_message(log_file, 'waiting data...')
                                         time.sleep(1)
 
                                     if count == 10: # Not possible to load all from page, save the current data
@@ -177,6 +191,7 @@ class MetLifeController():
                                     # print("dentista.text: ", dentista.text)
                                     dentista_data = dentista.text.split('\n')
                                     print(dentista_data)
+                                    LoggerMessageHelper.log_message(log_file, dentista_data)
 
                                     # Outliers
                                     if len(dentista_data) < 3:
@@ -220,15 +235,18 @@ class MetLifeController():
                             except Exception as e:
                                 full_traceback = traceback.format_exc()
                                 logging.error(f"An error occurred in data collection flow: {full_traceback}")
+                                LoggerMessageHelper.log_message(log_file, 'msg: '+ e)
                                 return {'msg': e}
 
         except WebDriverException as e:
             print(f"An Web Driver Error occurred: {e}")
+            LoggerMessageHelper.log_message(log_file, f"An Web Driver Error occurred: {e}")
 
         finally:
             # Close the browser window
             driver.quit()
             print('finish')
+            LoggerMessageHelper.log_message(log_file, 'Finish')
 
     def get_dentistas_metlife(self):
         return []

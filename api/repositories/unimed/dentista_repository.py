@@ -16,24 +16,13 @@ class DentistaOrm(Base):
     id = Column(BigInteger, primary_key=True, autoincrement=True)
     nome = Column(String(220), nullable=False)
     cro = Column(String(16), primary_key=True, nullable=False)
-    cro_uf = Column(String(2), primary_key=True, nullable=False)
-    codigo_prestador = Column(String(16), default=None)
+    uf = Column(String(2), primary_key=True, nullable=False)
     cpf_cnpj = Column(String(220), default=None)
     razao_social = Column(String(220), default=None)
-    rede = Column(String(100), default=None)
     tipo_estabelecimento = Column(String(220), default=None)
-    website = Column(String(100), default=None)
-    especialista = Column(Integer, default=False)
-    tipo_pessoa = Column(String(2), default=None)
-    relacao_operadora = Column(String(8), default=None)
-    vinculacao_codigo = Column(String(16), default=None)
-    vinculacao_nome = Column(String(220), default=None)
-    vinculacao_razao_social = Column(String(220), default=None)
-    vinculacao_cnpj = Column(String(220), default=None)
     logradouro = Column(String(220), default=None)
     bairro = Column(String(64), default=None)
     cidade = Column(String(64), default=None)
-    uf = Column(String(2), default=None)
     latitude = Column(String(32), nullable=False)
     longitude = Column(String(32), nullable=False)
     areas_atuacao = Column(String(220), default=None)
@@ -44,7 +33,7 @@ class DentistaOrm(Base):
     updated_at = Column(DateTime(timezone=True), default=None)
 
     __table_args__ = (
-        PrimaryKeyConstraint('id', 'cro', 'cro_uf'),
+        PrimaryKeyConstraint('id', 'cro', 'uf'),
     )
 
 engine = create_engine(DATABASE_URL)
@@ -79,12 +68,12 @@ class DentistaRepository:
         finally:
             db.close()
 
-    def find_dentista(self, cro, cro_uf):
+    def find_dentista(self, cro, uf):
         db = SessionLocal()
         try:
             return db.query(DentistaOrm).filter(
                 DentistaOrm.cro == cro,
-                DentistaOrm.cro_uf == cro_uf
+                DentistaOrm.uf == uf
             ).first()
         finally:
             db.close()

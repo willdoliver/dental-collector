@@ -3,19 +3,24 @@ import traceback, logging
 import requests, json, time, random
 from dotenv import load_dotenv
 from datetime import datetime
-from api.models.unimed_model import DentistaModel, URLCrawledModel
+from api.models.unimed_model import DentistaModel
+from api.models.unimed_summary_data_model import SummaryDataModel
 from api.repositories.unimed.dentista_repository import DentistaRepository
-from api.repositories.unimed.urls_crawled_repository import URLsCrawledRepository
-from api.controllers.search_points import SearchPoints
+from api.repositories.unimed.unimed_summary_data_repository import SummaryDataRepository
+from api.helpers.logger_message_helper import LoggerMessageHelper
+from api.helpers.logfile_helper import LogfileHelper
+from api.helpers.search_points_helper import SearchPointsHelper
 
 load_dotenv()
-urls_crawled_repository = URLsCrawledRepository()
+summary_data_repository = SummaryDataRepository()
 dentista_repository = DentistaRepository()
-search_points = SearchPoints()
+search_points = SearchPointsHelper()
 
 class UnimedController():
 
     def get_dentistas_from_unimed_odonto(self):
+        log_file = LogfileHelper.get_log_file('unimed')
+        LoggerMessageHelper.log_message(log_file, 'Started')
 
         planos_unimed = [
             # 804, 453, 374,
@@ -40,11 +45,17 @@ class UnimedController():
         try:
             urls_crawled = []
             try:
-                urls_from_repository = urls_crawled_repository.get_urls()
+                urls_from_repository = summary_data_repository.get_urls()
                 urls_crawled = [model.url for model in urls_from_repository]
             except Exception as e:
                 full_traceback = traceback.format_exc()
                 logging.error(f"Exception occurred: {full_traceback}")
+
+                LoggerMessageHelper.log_message(
+                    LogfileHelper.get_log_file('unimed'),
+                    f'except get_urls error: {full_traceback}'
+                )
+
                 return {'msg': e}
 
             for plano in planos_unimed:
@@ -67,16 +78,20 @@ class UnimedController():
                         url_search = url_point + '&numeroPagina='+str(page)
 
                         if url_search in urls_crawled:
-                            print("Skipping city: " + url_search)
+                            print('Skipping city: ' + url_search)
+                            LoggerMessageHelper.log_message(log_file, 'Skipping city: ' + url_search)
                             page += 1
                             break
 
-                        print("Searching: " + url_search)
+                        print('Searching: ' + url_search)
+                        LoggerMessageHelper.log_message(log_file, 'Searching: ' + url_search)
+
                         data = self.__get_data(url_search)
                         error = data['errors']
 
                         if error:
                             print(error)
+                            LoggerMessageHelper.log_message(log_file, error)
                             return {'msg': error}
 
                         content = data['data']
@@ -112,7 +127,7 @@ class UnimedController():
                             dentista.pop('locaisAtendimento')
                             dentista.pop('dataAtualizacao')
 
-                            dentista_exist = dentista_repository.find_dentista(dentista['cro'], dentista['ufCro'])
+                            dentista_exist = dentista_repository.find_dentista(dentista['cro'], dentista['uf'])
 
                             if dentista_exist != None:
                                 dentista_exist = dentista_exist.__dict__
@@ -131,7 +146,7 @@ class UnimedController():
                         if 'quantidadePaginas' in content\
                             and content['quantidadePaginas'] is not None:
 
-                            url_model = URLCrawledModel(**{
+                            url_model = SummaryDataModel(**{
                                 'url': url_search,
                                 'plano': plano,
                                 'latitude': str(point[0]),
@@ -142,7 +157,7 @@ class UnimedController():
 
                             time.sleep(random.randint(11, 30))
                             if page <= int(content['quantidadePaginas']):
-                                inserted = urls_crawled_repository.save_url_crawled(url_model)
+                                inserted = summary_data_repository.save_url_crawled(url_model)
                                 if inserted:
                                     urls_crawled.append(url_search)
 
@@ -160,6 +175,7 @@ class UnimedController():
                         else:
                             page += 1
                             continue
+
             return {'msg': 'ok'}
         except Exception as e:
             full_traceback = traceback.format_exc()
@@ -186,14 +202,14 @@ class UnimedController():
 
         return content
 
-    def get_dentista_unimed(self, cro_num, cro_uf):
+    def get_dentista_unimed(self, cro_num, uf):
         content = {}
 
         try:
-            dentistas = dentista_repository.find_dentista(cro_num, cro_uf)
+            dentistas = dentista_repository.find_dentista(cro_num, uf)
 
             if dentistas is None:
-                content['msg'] = "Dentista CRO:%s UF:%s não encontrado!" % (cro_num, cro_uf)
+                content['msg'] = "Dentista CRO:%s UF:%s não encontrado!" % (cro_num, uf)
             else:
                 dentista_model = [DentistaModel(**dentista) for dentista in dentistas]
                 content['count'] = len(dentista_model)
@@ -208,19 +224,28 @@ class UnimedController():
         return content
 
     def __get_data(self, origin):
-        if origin == 'local':
-            with open('api/examples/unimed_example.json', 'r', encoding='utf-8') as json_file:
-                return json.load(json_file)
-        else:
-            data = requests.get(origin)
-            if data.status_code == 200:
-                return json.loads(data.content.decode('utf-8'))
+        try:
+            if origin == 'local':
+                with open('api/examples/unimed_example.json', 'r', encoding='utf-8') as json_file:
+                    return json.load(json_file)
             else:
-                return {"errors": "Error when requesting page"}
+                data = requests.get(origin)
+                if data.status_code == 200:
+                    return json.loads(data.content.decode('utf-8'))
+                else:
+                    return {"errors": "Error when requesting page"}
+        except Exception as e:
+            full_traceback = traceback.format_exc()
+            logging.error(f'except __get_data error: {full_traceback}')
+
+            LoggerMessageHelper.log_message(
+                LogfileHelper.get_log_file('unimed'),
+                f'except __get_data error: {full_traceback}'
+            )
 
     def update_unimed_urls(self):
         try:
-            documents = urls_crawled_repository.get_urls()
+            documents = summary_data_repository.get_urls()
 
             elements_updated = 0
             for document in documents:
@@ -240,7 +265,7 @@ class UnimedController():
                 }
                 print(data_to_update)
 
-                result = urls_crawled_repository.update_url(document_id, data_to_update)
+                result = summary_data_repository.update_url(document_id, data_to_update)
 
                 print('Update result: '+ str(result.modified_count))
                 elements_updated += 1
@@ -249,4 +274,10 @@ class UnimedController():
         except Exception as e:
             full_traceback = traceback.format_exc()
             logging.error(f"Exception occurred: {full_traceback}")
+
+            LoggerMessageHelper.log_message(
+                LogfileHelper.get_log_file('unimed'),
+                f'except update_unimed_urls error: {full_traceback}'
+            )
+
             return {'msg': e}

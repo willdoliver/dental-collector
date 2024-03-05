@@ -3,6 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv
 from api.models.metlife_summary_data_model import SummaryDataModel
+from datetime import datetime, timedelta
 import os
 
 load_dotenv()
@@ -62,9 +63,11 @@ class SummaryDataRepository:
     def find_data(self, uf, cidade):
         db = SessionLocal()
         try:
+            five_days_ago = datetime.now() - timedelta(days=5)
             return db.query(SummaryDataOrm).filter(
                 SummaryDataOrm.uf == uf,
                 SummaryDataOrm.cidade == cidade,
+                SummaryDataOrm.created_at < five_days_ago.strftime('%Y-%m-%d %H:%M:%S')
             ).first()
         finally:
             db.close()
