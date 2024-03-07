@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from datetime import datetime
 from api.models.unimed_model import DentistaModel
 from api.models.unimed_summary_data_model import SummaryDataModel
-from api.repositories.unimed.dentista_repository import DentistaRepository
+from api.repositories.unimed.unimed_dentista_repository import DentistaRepository
 from api.repositories.unimed.unimed_summary_data_repository import SummaryDataRepository
 from api.helpers.logger_message_helper import LoggerMessageHelper
 from api.helpers.logfile_helper import LogfileHelper

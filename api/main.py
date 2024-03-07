@@ -7,6 +7,7 @@ from .routers.metlife_router import *
 from .routers.amil_router import *
 from .routers.uniodonto_router import *
 from .routers.odontoprev_router import *
+from .routers.etl_router import *
 
 app = FastAPI()
 
