@@ -1,20 +1,15 @@
 
-from fastapi import Depends, FastAPI
-
+from fastapi import Depends, FastAPI, Depends
+from api.routers import get_routers
 from .dependencies import get_query_token, get_token_header
-from .routers.unimed_router import *
-from .routers.metlife_router import *
-from .routers.amil_router import *
-from .routers.uniodonto_router import *
-from .routers.odontoprev_router import *
-from .routers.etl_router import *
 
 app = FastAPI()
 
-app.include_router(
-    router,
-    dependencies=[Depends(get_token_header)]
-)
+routers = get_routers()
+dependency = [Depends(get_token_header)]
+
+for router in routers:
+    app.include_router(router, dependencies=dependency)
 
 @app.get("/")
 async def root():
@@ -25,7 +20,6 @@ async def databases():
     import pymongo
     cl = pymongo.MongoClient("mongodb://localhost:27017/")
     return {"databases": cl.list_database_names()}
-
 
 # https://fastapi.tiangolo.com/tutorial/bigger-applications/
 # /docs
