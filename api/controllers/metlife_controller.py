@@ -13,7 +13,7 @@ from selenium.common.exceptions import WebDriverException, TimeoutException, Une
 from api.models.metlife_model import DentistaModel
 from api.models.metlife_summary_data_model import SummaryDataModel
 from api.repositories.metlife.metlife_dentistas_repository import DentistaRepository
-from api.repositories.metlife.metlife_sumary_data_repository import SummaryDataRepository
+from api.repositories.metlife.metlife_summary_data_repository import SummaryDataRepository
 from api.helpers.logger_message_helper import LoggerMessageHelper
 from api.helpers.logfile_helper import LogfileHelper
 from dotenv import load_dotenv
@@ -24,6 +24,7 @@ chrome_opt = Options()
 chrome_opt.add_argument('--headless')
 chrome_opt.add_argument('--disable-gpu')
 chrome_opt.add_argument('--no-sandbox')
+chrome_opt.add_argument('--window-size=1920,1080')
 
 load_dotenv()
 metlife_repository = DentistaRepository()
@@ -60,8 +61,8 @@ class MetLifeController():
                     LoggerMessageHelper.log_message(log_file, uf)
 
                     # TODO: Remove
-                    if uf in ['AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE']:
-                        continue
+                    # if uf in ['AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE', 'TO']:
+                    #     continue
 
                     uf_element.select_by_index(uf_index+1)
 
@@ -99,16 +100,14 @@ class MetLifeController():
                                     lambda driver: len(driver.find_elements(By.XPATH, "//div[@id='divResultado']/b")) > 1
                                 )
                             except TimeoutException as e:
-                                city_done = summary_data_repository.find_data(uf, city)
-                                if city_done == None:
-                                    self.add_summary_data(uf, city)
-                                    continue
-                                else:
-                                    continue
+                                print('Aborting city because TimeoutException')
+                                LoggerMessageHelper.log_message(log_file, 'Aborting city because TimeoutException')
+                                self.add_summary_data(uf, city)
+                                continue
 
                             except UnexpectedAlertPresentException as e:
-                                print('Aborting city')
-                                LoggerMessageHelper.log_message(log_file, 'Aborting city')
+                                print('Aborting city because UnexpectedAlertPresentException')
+                                LoggerMessageHelper.log_message(log_file, 'Aborting city because UnexpectedAlertPresentException')
                                 self.add_summary_data(uf, city)
                                 continue
 
@@ -121,23 +120,18 @@ class MetLifeController():
                             result_prev = driver.find_element(By.ID, "divResultado")
                             result_prev = result_prev.text
                             print('result_prev: ', str(result_prev))
-                            LoggerMessageHelper.log_message(log_file, 'result_prev: '+ str(result_prev))
+                            LoggerMessageHelper.log_message(log_file, f'result_prev: {result_prev}')
 
                             try:
                                 count_dentistas = int(result_prev.split(' ')[-2])
                                 print("count_dentistas: ", str(count_dentistas))
-                                LoggerMessageHelper.log_message(log_file, 'count_dentistas: '+ str(count_dentistas))
+                                LoggerMessageHelper.log_message(log_file, f'count_dentistas: {count_dentistas}')
 
-                                city_done = summary_data_repository.find_data(uf, city)
-                                if city_done != None:
-                                    city_done = city_done.__dict__
-                                    if city_done['count_dentistas'] == count_dentistas:
-                                        print('Skipping city...')
-                                        LoggerMessageHelper.log_message(log_file, 'Skipping city')
-                                        continue
-                                    else:
-                                        print('In database: ', str(city_done['count_dentistas']))
-                                        LoggerMessageHelper.log_message(log_file, 'In database: ', str(city_done['count_dentistas']))
+                                city_done = summary_data_repository.find_data_range_date(uf, city)
+                                if city_done is None:
+                                    print('Skipping city...')
+                                    LoggerMessageHelper.log_message(log_file, 'Skipping city')
+                                    continue
 
                                 WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "liButtonMais")))
                                 count_pagination = self.get_count_pagination(driver)
@@ -160,7 +154,7 @@ class MetLifeController():
                                         full_traceback = traceback.format_exc()
                                         logging.error(f"btnMaisResultados error: {full_traceback}")
                                         print({'msg': e})
-                                        LoggerMessageHelper.log_message(log_file, 'msg: '+ e)
+                                        LoggerMessageHelper.log_message(log_file, f'msg:  {e}')
                                         pass
 
                                     count_pagination_old = count_pagination
@@ -191,27 +185,35 @@ class MetLifeController():
                                     # print("dentista.text: ", dentista.text)
                                     dentista_data = dentista.text.split('\n')
                                     print(dentista_data)
-                                    LoggerMessageHelper.log_message(log_file, dentista_data)
+                                    LoggerMessageHelper.log_message(log_file, f'dentista_data: {dentista_data}')
 
                                     # Outliers
                                     if len(dentista_data) < 3:
                                         continue
-                                    elif len(dentista_data[1].split(' ')) > 1:
-                                        dentista_data.insert(1, '')
+                                    # specialist case and not specialist with empty specialist field
+                                    elif dentista_data[1] == '' and len(dentista_data) >= 7:
+                                        dentista_data.pop(1)
 
                                     cep = dentista_data[3].split(',')[0]
-                                    dentista = {
-                                        'nome': dentista_data[0],
-                                        'cro': re.sub(r'\D', '', dentista_data[3].split(',')[1]),
-                                        'uf': uf,
-                                        'cpf_cnpj': re.sub(r'\D', '', dentista_data[3].split(',')[2]),
-                                        'tipo_estabelecimento': dentista_data[5].split(':')[-1].strip(),
-                                        'logradouro': dentista_data[2] + ' ' + cep,
-                                        'cidade': city,
-                                        'especialidade': dentista_data[1].strip().replace(',',''),
-                                        'telefone': re.sub(r'\D', '', dentista_data[4]),
-                                        'created_at': now
-                                    }
+                                    try:
+                                        dentista = {
+                                            'nome': dentista_data[0],
+                                            'cro': re.sub(r'\D', '', dentista_data[3].split(',')[1]),
+                                            'uf': uf,
+                                            'cpf_cnpj': re.sub(r'\D', '', dentista_data[3].split(',')[2]),
+                                            'tipo_estabelecimento': dentista_data[5].split(':')[-1].strip(),
+                                            'logradouro': dentista_data[2] + ' ' + cep,
+                                            'cidade': city,
+                                            'especialidade': dentista_data[1].strip().replace(',',''),
+                                            'telefone': re.sub(r'Telefone: ', '', dentista_data[4]),
+                                            'created_at': now
+                                        }
+                                    except Exception as e:
+                                        LoggerMessageHelper.log_message(log_file, 'error parsing dentista_data')
+                                        continue
+
+                                    print(dentista)
+                                    LoggerMessageHelper.log_message(log_file, f'dentista: {dentista}')
 
                                     dentista_exist = metlife_repository.find_dentista(dentista['cro'], uf, dentista['especialidade'])
 
@@ -221,8 +223,8 @@ class MetLifeController():
                                         dentista_model = DentistaModel.model_validate(dentista)
 
                                         inserted = metlife_repository.update_dentista(
-                                            dentista_exist["id"],
-                                            dentista_exist["especialidade"],
+                                            dentista_exist['id'],
+                                            dentista_exist['especialidade'],
                                             dentista_model
                                         )
                                     else:
@@ -234,13 +236,13 @@ class MetLifeController():
 
                             except Exception as e:
                                 full_traceback = traceback.format_exc()
-                                logging.error(f"An error occurred in data collection flow: {full_traceback}")
-                                LoggerMessageHelper.log_message(log_file, 'msg: '+ e)
+                                logging.error(f'An error occurred in data collection flow: {full_traceback}')
+                                LoggerMessageHelper.log_message(log_file, f'msg: {e}')
                                 return {'msg': e}
 
         except WebDriverException as e:
-            print(f"An Web Driver Error occurred: {e}")
-            LoggerMessageHelper.log_message(log_file, f"An Web Driver Error occurred: {e}")
+            print(f'An Web Driver Error occurred: {e}')
+            LoggerMessageHelper.log_message(log_file, f'An Web Driver Error occurred: {e}')
 
         finally:
             # Close the browser window
@@ -266,15 +268,27 @@ class MetLifeController():
             return 0
 
     def add_summary_data(self, uf, city, count_dentistas = 0):
-        summary_data = SummaryDataModel(**{
-            'uf': uf,
-            'cidade': city,
-            'count_dentistas': count_dentistas,
-            'created_at': datetime.now()
-        })
+        city_done = summary_data_repository.find_data(uf, city)
 
-        summary_data_model = SummaryDataModel.model_validate(summary_data)
-        summary_inserted = summary_data_repository.insert_data(summary_data_model)
+        if city_done is not None:
+            summary_data = SummaryDataModel(**{
+                'uf': uf,
+                'cidade': city,
+                'count_dentistas': count_dentistas,
+                'updated_at': datetime.now()
+            })
+            summary_data_model = SummaryDataModel.model_validate(summary_data)
+            summary_updated = summary_data_repository.update_data(uf, city, summary_data_model)
+
+        else:
+            summary_data = SummaryDataModel(**{
+                'uf': uf,
+                'cidade': city,
+                'count_dentistas': count_dentistas,
+                'created_at': datetime.now()
+            })
+            summary_data_model = SummaryDataModel.model_validate(summary_data)
+            summary_inserted = summary_data_repository.insert_data(summary_data_model)
 
     def select_todos(self, driver):
         plano_element = driver.find_element(By.ID, "optPlano")

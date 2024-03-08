@@ -12,7 +12,7 @@ from selenium.webdriver.chrome.options import Options
 from api.models.odontoprev_model import DentistaModel
 from api.models.odontoprev_summary_data_model import SummaryDataModel
 from api.repositories.odontoprev.odontoprev_dentistas_repository import DentistaRepository
-from api.repositories.odontoprev.odontoprev_sumary_data_repository import SummaryDataRepository
+from api.repositories.odontoprev.odontoprev_summary_data_repository import SummaryDataRepository
 from api.helpers.logger_message_helper import LoggerMessageHelper
 from api.helpers.logfile_helper import LogfileHelper
 from dotenv import load_dotenv
@@ -21,6 +21,7 @@ chrome_opt = Options()
 chrome_opt.add_argument('--headless')
 chrome_opt.add_argument('--disable-gpu')
 chrome_opt.add_argument('--no-sandbox')
+chrome_opt.add_argument('--window-size=1920,1080')
 
 load_dotenv()
 odontoprev_repository = DentistaRepository()

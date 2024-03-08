@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, Column, BigInteger, String, Integer, Boolean, DateTime, PrimaryKeyConstraint
+from sqlalchemy import create_engine, Column, BigInteger, String, Integer, Boolean, DateTime, PrimaryKeyConstraint, or_, and_
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv
@@ -66,8 +66,22 @@ class SummaryDataRepository:
             five_days_ago = datetime.now() - timedelta(days=5)
             return db.query(SummaryDataOrm).filter(
                 SummaryDataOrm.uf == uf,
+                SummaryDataOrm.cidade == cidade
+            ).first()
+        finally:
+            db.close()
+
+    def find_data_range_date(self, uf, cidade, days = 5):
+        db = SessionLocal()
+        try:
+            five_days_ago = datetime.now() - timedelta(days=days)
+            return db.query(SummaryDataOrm).filter(
+                SummaryDataOrm.uf == uf,
                 SummaryDataOrm.cidade == cidade,
-                SummaryDataOrm.created_at < five_days_ago.strftime('%Y-%m-%d %H:%M:%S')
+                or_(
+                    and_(SummaryDataOrm.created_at <= five_days_ago.strftime('%Y-%m-%d %H:%M:%S'), SummaryDataOrm.updated_at == None),
+                    SummaryDataOrm.updated_at <= five_days_ago.strftime('%Y-%m-%d %H:%M:%S'),
+                )
             ).first()
         finally:
             db.close()

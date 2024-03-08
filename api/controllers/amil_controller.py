@@ -9,7 +9,7 @@ from datetime import datetime
 from api.models.amil_model import DentistaModel
 from api.models.amil_summary_data_model import SummaryDataModel
 from api.repositories.amil.amil_dentistas_repository import DentistaRepository
-from api.repositories.amil.amil_sumary_data_repository import SummaryDataRepository
+from api.repositories.amil.amil_summary_data_repository import SummaryDataRepository
 from api.helpers.logger_message_helper import LoggerMessageHelper
 from api.helpers.logfile_helper import LogfileHelper
 from dotenv import load_dotenv

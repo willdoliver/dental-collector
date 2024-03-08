@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 from api.models.uniodonto_model import DentistaModel
 from api.models.uniodonto_summary_data_model import SummaryDataModel
 from api.repositories.uniodonto.uniodonto_dentistas_repository import DentistaRepository
-from api.repositories.uniodonto.uniodonto_sumary_data_repository import SummaryDataRepository
+from api.repositories.uniodonto.uniodonto_summary_data_repository import SummaryDataRepository
 from api.helpers.logger_message_helper import LoggerMessageHelper
 from api.helpers.logfile_helper import LogfileHelper
 from dotenv import load_dotenv
