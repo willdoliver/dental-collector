@@ -78,13 +78,16 @@ class ETLController():
         return df
 
     def load(self, df: pd.DataFrame, table_name: str) -> None:
-        # DATABASE_URL = os.getenv("URI_MYSQL_DENTAL")
-        DATABASE_URL = os.getenv("URI_MYSQL_LIFE")
-        engine = create_engine(DATABASE_URL)
+        urls = []
+        urls.append(os.getenv("URI_MYSQL_DENTAL"))
+        urls.append(os.getenv("URI_MYSQL_LIFE"))
 
-        df.to_sql(
-            name=table_name,
-            con=engine,
-            index=False,
-            if_exists='replace'
-        )
+        for url in urls:
+            engine = create_engine(url)
+
+            df.to_sql(
+                name=table_name,
+                con=engine,
+                index=False,
+                if_exists='replace'
+            )
