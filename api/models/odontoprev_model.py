@@ -12,6 +12,7 @@ class DentistaModel(BaseModel):
     cidade: str | None
     especialidade: str | None
     logradouro: str | None
+    bairro: str | None
     created_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
 
@@ -26,6 +27,7 @@ class DentistaModel(BaseModel):
                 "nome": "João Maria da Silva",
                 "cro": "12345",
                 "uf": "PR",
-                "cidade": "Curitiba"
+                "cidade": "Curitiba",
+                "bairro": "Centro",
             }
         }

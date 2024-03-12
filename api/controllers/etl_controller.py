@@ -3,7 +3,6 @@ import traceback, logging
 import pandas as pd
 from datetime import datetime
 from sqlalchemy import create_engine
-from api.models.uniodonto_model import DentistaModel as uniodontoDentistaModel
 from api.repositories.amil.amil_dentistas_repository import DentistaRepository as AmilRepository
 from api.repositories.metlife.metlife_dentistas_repository import DentistaRepository as MetlifeRepository
 from api.repositories.odontoprev.odontoprev_dentistas_repository import DentistaRepository as OdontoprevRepository
@@ -76,9 +75,6 @@ class ETLController():
     def transform(self, all_dentistas: list, table_name: str) -> pd.DataFrame:
         dentistas_list = [person.__dict__ for person in all_dentistas]
         df = pd.DataFrame.from_records(dentistas_list, exclude=['_sa_instance_state'])
-
-        if 'unimed' in table_name:
-            df['areas_atuacao'] = df['areas_atuacao'].str.replace('|', ',')
         return df
 
     def load(self, df: pd.DataFrame, table_name: str) -> None:

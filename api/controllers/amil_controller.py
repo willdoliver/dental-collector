@@ -4,7 +4,6 @@ import time
 import random
 import requests, json
 import traceback, logging
-from urllib.parse import urlencode
 from datetime import datetime
 from api.models.amil_model import DentistaModel
 from api.models.amil_summary_data_model import SummaryDataModel
@@ -28,36 +27,40 @@ class AmilController():
 
     def find_dentistas_from_amil(self):
         log_file = LogfileHelper.get_log_file('amil')
-        LoggerMessageHelper(log_file, 'Started')
+        LoggerMessageHelper.log_message(log_file, 'Started')
 
         try:
             ufs = self.get_ufs()
             for uf in ufs:
                 uf = uf['Uf']
                 print(uf)
-                LoggerMessageHelper(log_file, uf)
+                LoggerMessageHelper.log_message(log_file, uf)
 
                 cities = self.get_cities(uf)
                 print(cities)
-                LoggerMessageHelper(log_file, cities)
+                LoggerMessageHelper.log_message(log_file, cities)
                 for city in cities:
                     city = city["Municipio"]
                     print(uf + " - " + city)
-                    LoggerMessageHelper(log_file, uf + " - " + city)
+                    LoggerMessageHelper.log_message(log_file, uf + " - " + city)
 
-                    city_done = summary_data_repository.find_data(uf, city)
-                    if (city_done is not None):
+                    city_done = summary_data_repository.find_data_range_date(uf, city)
+                    if (city_done is None):
                         print("Skipping city...")
-                        LoggerMessageHelper(log_file, "Skipping city...")
+                        LoggerMessageHelper.log_message(log_file, "Skipping city...")
                         continue
 
                     especialidades = self.get_especialidades(uf, city, "TODOS OS BAIRROS")
                     print(especialidades)
-                    LoggerMessageHelper(log_file, especialidades)
+                    LoggerMessageHelper.log_message(log_file, especialidades)
+
+                    if len(especialidades) == 0:
+                        continue
+
                     for especialidade in especialidades:
                         especialidade = especialidade['NIVEL2_ELEMENTODIVULGACAO']
                         print(especialidade)
-                        LoggerMessageHelper(log_file, especialidade)
+                        LoggerMessageHelper.log_message(log_file, f'especialidade: {especialidade}')
 
                         dentistas_data = self.get_dentistas(uf, city, especialidade)
                         if (len(dentistas_data) == 0):
@@ -66,11 +69,18 @@ class AmilController():
                         now = datetime.now()
                         for dent in dentistas_data:
                             print(dent)
-                            LoggerMessageHelper(log_file, dent)
+                            LoggerMessageHelper.log_message(log_file, f'dent: {dent}')
                             address = str(dent["enderecoRedeCredenciada"][0]["logradouro"])\
                                 + ", " + str(dent["enderecoRedeCredenciada"][0]["numero"])\
-                                + ", " + str(dent["enderecoRedeCredenciada"][0]["cep"])\
-                                + " - " + str(dent["enderecoRedeCredenciada"][0]["bairroRedeCredenciada"])
+                                + ", " + str(dent["enderecoRedeCredenciada"][0]["cep"])
+
+                            bairro = None
+                            if dent["enderecoRedeCredenciada"][0]["bairroRedeCredenciada"] is not None:
+                                bairro = str(dent["enderecoRedeCredenciada"][0]["bairroRedeCredenciada"])
+
+                            telefone = None
+                            if dent["enderecoRedeCredenciada"][0]["telefones"] is not None:
+                                telefone = dent["enderecoRedeCredenciada"][0]["telefones"].replace(';',',')[:-1]
 
                             dentista = {
                                 'nome_dentista': dent["nomePrestador"],
@@ -81,12 +91,13 @@ class AmilController():
                                 'cpf_cnpj': str(dent["documento"]),
                                 'tipo_estabelecimento': dent["tipoPessoa"],
                                 'logradouro': address,
+                                'bairro': bairro,
                                 'cidade': city,
                                 'especialidade': especialidade,
-                                'telefone': dent["enderecoRedeCredenciada"][0]["telefones"],
+                                'telefone': telefone,
                             }
                             print(dentista)
-                            LoggerMessageHelper(log_file, dentista)
+                            LoggerMessageHelper.log_message(log_file, f'dentista: {dentista}')
 
                             dentista_exist = amil_repository.find_dentista(dentista['cro'], uf, dentista['especialidade'])
 
@@ -130,11 +141,11 @@ class AmilController():
         except Exception as e:
             full_traceback = traceback.format_exc()
             logging.error(f"except error: {full_traceback}")
-            LoggerMessageHelper(log_file, full_traceback)
+            LoggerMessageHelper.log_message(log_file, full_traceback)
 
         finally:
             print('finish')
-            LoggerMessageHelper(log_file, "Finish")
+            LoggerMessageHelper.log_message(log_file, "Finish")
 
     def __get_headers(self):
         return {
@@ -174,7 +185,7 @@ class AmilController():
         if response.status_code == 200:
             return json.loads(response.content.decode('utf-8'))
         else:
-            return {"errors": "Error when requesting especialidades"}
+            return [{"errors": "Error when requesting especialidades"}]
         
     def get_dentistas(self, uf, city, especialidade):
         headers = self.__get_headers()
@@ -201,6 +212,5 @@ class AmilController():
             full_traceback = traceback.format_exc()
             logging.error(f"except error: {full_traceback}")
 
-            LoggerMessageHelper(LogfileHelper.get_log_file('amil'), full_traceback)
-
-            return {"errors": "Error when requesting dentistas"}
+            LoggerMessageHelper.log_message(LogfileHelper.get_log_file('amil'), full_traceback)
+            return []

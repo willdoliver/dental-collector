@@ -194,6 +194,10 @@ class MetLifeController():
                                     elif dentista_data[1] == '' and len(dentista_data) >= 7:
                                         dentista_data.pop(1)
 
+                                    bairro = None
+                                    if dentista_data[2].split('-')[0] is not None:
+                                        bairro = dentista_data[2].split('-')[1].split(',')[0]
+
                                     cep = dentista_data[3].split(',')[0]
                                     try:
                                         dentista = {
@@ -203,6 +207,7 @@ class MetLifeController():
                                             'cpf_cnpj': re.sub(r'\D', '', dentista_data[3].split(',')[2]),
                                             'tipo_estabelecimento': dentista_data[5].split(':')[-1].strip(),
                                             'logradouro': dentista_data[2] + ' ' + cep,
+                                            'bairro': bairro,
                                             'cidade': city,
                                             'especialidade': dentista_data[1].strip().replace(',',''),
                                             'telefone': re.sub(r'Telefone: ', '', dentista_data[4]),

@@ -79,7 +79,10 @@ class SummaryDataRepository:
                 SummaryDataOrm.uf == uf,
                 SummaryDataOrm.cidade == cidade,
                 or_(
-                    and_(SummaryDataOrm.created_at <= five_days_ago.strftime('%Y-%m-%d %H:%M:%S'), SummaryDataOrm.updated_at == None),
+                    and_(
+                        SummaryDataOrm.created_at <= five_days_ago.strftime('%Y-%m-%d %H:%M:%S'),
+                        SummaryDataOrm.updated_at == None
+                    ),
                     SummaryDataOrm.updated_at <= five_days_ago.strftime('%Y-%m-%d %H:%M:%S'),
                 )
             ).first()

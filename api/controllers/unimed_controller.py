@@ -45,7 +45,7 @@ class UnimedController():
         try:
             urls_crawled = []
             try:
-                urls_from_repository = summary_data_repository.get_urls()
+                urls_from_repository = summary_data_repository.get_urls_range_date()
                 urls_crawled = [model.url for model in urls_from_repository]
             except Exception as e:
                 full_traceback = traceback.format_exc()
@@ -77,7 +77,7 @@ class UnimedController():
                     while True:
                         url_search = url_point + '&numeroPagina='+str(page)
 
-                        if url_search in urls_crawled:
+                        if url_search not in urls_crawled:
                             print('Skipping city: ' + url_search)
                             LoggerMessageHelper.log_message(log_file, 'Skipping city: ' + url_search)
                             page += 1
@@ -86,7 +86,7 @@ class UnimedController():
                         print('Searching: ' + url_search)
                         LoggerMessageHelper.log_message(log_file, 'Searching: ' + url_search)
 
-                        data = self.__get_data(url_search)
+                        data = self.__get_data('local')
                         error = data['errors']
 
                         if error:
@@ -112,11 +112,11 @@ class UnimedController():
 
                             phones = dentista['locaisAtendimento'][0]['telefone']
                             if phones is not None:
-                                dentista['telefone'] = '|'.join([f"({phone['ddd']}){phone['numero']}" for phone in phones])
+                                dentista['telefone'] = ','.join([f"({phone['ddd']}){phone['numero']}" for phone in phones])
 
                             areas = dentista['locaisAtendimento'][0]['areasAtuacao']
                             if areas is not None:
-                                dentista['areas_atuacao'] = '|'.join([f"{area['descricaoAreaAtuacao']}" for area in areas])
+                                dentista['especialidades'] = ','.join([f"{area['descricaoAreaAtuacao']}" for area in areas])
 
                             email = dentista['locaisAtendimento'][0]['email']
                             if email is not None:
@@ -146,20 +146,11 @@ class UnimedController():
                         if 'quantidadePaginas' in content\
                             and content['quantidadePaginas'] is not None:
 
-                            url_model = SummaryDataModel(**{
-                                'url': url_search,
-                                'plano': plano,
-                                'latitude': str(point[0]),
-                                'longitude': str(point[1]),
-                                'numero_pagina': page,
-                                'created_at': now
-                            })
-
-                            time.sleep(random.randint(11, 30))
                             if page <= int(content['quantidadePaginas']):
-                                inserted = summary_data_repository.save_url_crawled(url_model)
-                                if inserted:
+                                response = self.__save_or_update_url(url_search, plano, point, page)
+                                if response:
                                     urls_crawled.append(url_search)
+                                time.sleep(random.randint(11, 30))
 
                                 # Dont search for next inexisting page
                                 if page == int(content['quantidadePaginas']):
@@ -243,41 +234,24 @@ class UnimedController():
                 f'except __get_data error: {full_traceback}'
             )
 
-    def update_unimed_urls(self):
-        try:
-            documents = summary_data_repository.get_urls()
+    def __save_or_update_url(self, url, plano, point, page):
+        url_data = {
+            'url': url,
+            'plano': plano,
+            'latitude': str(point[0]),
+            'longitude': str(point[1]),
+            'numero_pagina': page
+        }
+        url_done = summary_data_repository.get_url(url_data)
 
-            elements_updated = 0
-            for document in documents:
-                document_id = document['_id']
-
-                url = document['url'].split('&')
-                plano = url[6].split('=')[-1]
-                latitude = url[7].split('=')[-1]
-                longitude = url[8].split('=')[-1]
-                numeroPagina = url[9].split('=')[-1]
-
-                data_to_update =  {
-                    'plano': plano,
-                    'latitude': latitude,
-                    'longitude': longitude,
-                    'pagina': int(numeroPagina),
-                }
-                print(data_to_update)
-
-                result = summary_data_repository.update_url(document_id, data_to_update)
-
-                print('Update result: '+ str(result.modified_count))
-                elements_updated += 1
-
-            return str(elements_updated) +' documents updated successfully', 200
-        except Exception as e:
-            full_traceback = traceback.format_exc()
-            logging.error(f"Exception occurred: {full_traceback}")
-
-            LoggerMessageHelper.log_message(
-                LogfileHelper.get_log_file('unimed'),
-                f'except update_unimed_urls error: {full_traceback}'
-            )
-
-            return {'msg': e}
+        if url_done is not None:
+            url_done = url_done.__dict__
+            url_data['updated_at'] = datetime.now()
+            url_model = SummaryDataModel(**url_data)
+            url_model = SummaryDataModel.model_validate(url_model)
+            return summary_data_repository.update_url_crawled(url_done['id'], url_model)
+        else:
+            url_data['created_at'] = datetime.now()
+            url_model = SummaryDataModel(**url_data)
+            url_model = SummaryDataModel.model_validate(url_model)
+            return summary_data_repository.save_url_crawled(url_model)

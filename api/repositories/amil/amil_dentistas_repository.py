@@ -22,6 +22,7 @@ class DentistaOrm(Base):
     cpf_cnpj = Column(String(220), default=None)
     tipo_estabelecimento = Column(String(220), default=None)
     logradouro = Column(String(220), default=None)
+    bairro = Column(String(220), default=None)
     cidade = Column(String(64), default=None)
     especialidade = Column(String(220), default=None)
     telefone = Column(String(220), nullable=True)

@@ -19,6 +19,7 @@ class DentistaOrm(Base):
     uf = Column(String(2), primary_key=True, nullable=False)
     tipo_estabelecimento = Column(String(220), default=None)
     logradouro = Column(String(220), default=None)
+    bairro = Column(String(220), default=None)
     cidade = Column(String(64), default=None)
     especialidade = Column(String(1024), default=None)
     telefone = Column(String(220), nullable=True)

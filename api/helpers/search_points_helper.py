@@ -10,28 +10,6 @@ from api.helpers.logger_message_helper import LoggerMessageHelper
 from api.helpers.logfile_helper import LogfileHelper
 
 class SearchPointsHelper():
-    def generate_clustered_grid_points(min_lat, max_lat, min_lng, max_lng, interval, num_clusters):
-        # Generate grid points within the specified latitude and longitude range
-        lats = np.arange(min_lat, max_lat, interval)
-        lngs = np.arange(min_lng, max_lng, interval)
-
-        # Create a list of tuples representing grid points
-        grid_points = [(lat, lng) for lat in lats for lng in lngs]
-
-        # Convert grid points to a NumPy array
-        data = np.array(grid_points)
-
-        # Apply K-Means clustering
-        kmeans = KMeans(n_clusters=num_clusters, random_state=42).fit(data)
-
-        # Get the cluster centers
-        cluster_centers = kmeans.cluster_centers_
-
-        # Convert cluster centers back to tuples
-        clustered_grid_points = [tuple(center) for center in cluster_centers]
-
-        return clustered_grid_points
-
     def get_brazil_search_points(self):
         try:
             radius = 100000
@@ -42,12 +20,11 @@ class SearchPointsHelper():
             interval = 1.0  # 1 degree interval
             num_clusters = 1300
 
-            clustered_grid_points = SearchPointsHelper.generate_clustered_grid_points(min_latitude, max_latitude, min_longitude, max_longitude, interval, num_clusters)
+            clustered_grid_points = SearchPointsHelper.__generate_clustered_grid_points(min_latitude, max_latitude, min_longitude, max_longitude, interval, num_clusters)
             map_center = [-14.2350, -51.9253]  # Approximate center of Brazil
             mymap = folium.Map(location=map_center, zoom_start=4)
 
-            brazil_points = SearchPointsHelper.point_is_in_brazil(clustered_grid_points)
-            # print(brazil_points)
+            brazil_points = SearchPointsHelper.__point_is_in_brazil(clustered_grid_points)
 
             for point in brazil_points:
                 folium.Marker(location=point, popup=point).add_to(mymap)
@@ -65,16 +42,38 @@ class SearchPointsHelper():
                     LogfileHelper.get_log_file('unimed'),
                     f'except get_brazil_search_points error: {full_traceback}'
                 )
+    def __generate_clustered_grid_points(min_lat, max_lat, min_lng, max_lng, interval, num_clusters):
+        # Generate grid points within the specified latitude and longitude range
+        lats = np.arange(min_lat, max_lat, interval)
+        lngs = np.arange(min_lng, max_lng, interval)
 
-    def point_is_in_brazil(points):
+        # Create a list of tuples representing grid points
+        grid_points = [(lat, lng) for lat in lats for lng in lngs]
+
+        # Convert grid points to a NumPy array
+        data = np.array(grid_points)
+
+        # Apply K-Means clustering
+        kmeans = KMeans(n_clusters=num_clusters, random_state=42, n_init='auto').fit(data)
+
+        # Get the cluster centers
+        cluster_centers = kmeans.cluster_centers_
+
+        # Convert cluster centers back to tuples
+        clustered_grid_points = [tuple(center) for center in cluster_centers]
+
+        return clustered_grid_points
+
+    def __point_is_in_brazil(points):
         try:
             # Function to check if a point is within Brazil
             def is_in_brazil(point):
                 point = Point(point)
                 return brazil_borders.geometry.contains(point).any()
 
+            sep = os.path.sep
             # Load a GeoDataFrame of Brazil's borders
-            brazil_borders = gpd.read_file(os.path.dirname(os.getcwd()) + "/uploads/ne_10m_admin_0_countries/ne_10m_admin_0_countries.shp")
+            brazil_borders = gpd.read_file(os.getcwd() + f"{sep}api{sep}uploads{sep}ne_10m_admin_0_countries{sep}ne_10m_admin_0_countries.shp")
             brazil_points = []
             false_positives_blocks = [
                 (-11.7, -66),
@@ -105,4 +104,3 @@ class SearchPointsHelper():
                     LogfileHelper.get_log_file('unimed'),
                     f'except point_is_in_brazil error: {full_traceback}'
                 )
-        

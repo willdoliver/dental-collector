@@ -15,7 +15,7 @@ class DentistaModel(BaseModel):
     cidade: str = None
     latitude: str = None
     longitude: str = None
-    areas_atuacao: str = None
+    especialidades: str = None
     telefone: str = None
     email: str = None
     data_atualizacao: Optional[datetime] | None = Field(alias="dataAtualizacao")

@@ -9,6 +9,7 @@ class DentistaModel(BaseModel):
     uf: str = Field(max_length=2)
     tipo_estabelecimento: str | None
     logradouro: str | None
+    bairro: str | None
     cidade: str | None
     especialidade: str | None
     telefone: str | None

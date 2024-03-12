@@ -62,7 +62,7 @@ class OdontoprevController():
                     count_dentistas_city = 0
 
                     city_done = self.get_city_done(uf, city_name)
-                    if city_done is not None:
+                    if city_done is None:
                         print('Skipping city')
                         LoggerMessageHelper.log_message(log_file, 'Skipping city')
                         continue
@@ -163,7 +163,7 @@ class OdontoprevController():
 
     def get_city_done(self, uf, city):
         try:
-            return summary_data_repository.find_data(uf, city)
+            return summary_data_repository.find_data_range_date(uf, city)
         except Exception as e:
             full_traceback = traceback.format_exc()
             logging.error(f'except get_city_done error: {full_traceback}')
@@ -176,7 +176,7 @@ class OdontoprevController():
     def save_city_done(self, uf, city, count_dentistas):
         try:
             now = datetime.now()
-            city_done = self.get_city_done(uf, city)
+            city_done = summary_data_repository.find_data(uf, city)
 
             if city_done is not None:
                 city_done = city_done.__dict__
@@ -235,7 +235,8 @@ class OdontoprevController():
                 "nome_fantasia": nome_fantasia,
                 "cro": cro,
                 "especialidade": especialidade,
-                "logradouro": endereco + " " + bairro + " "+ cep,
+                "logradouro": endereco + " "+ cep,
+                "bairro": bairro,
                 "telefone": telefones,
                 "tipo_estabelecimento": tipo_estabelecimento,
             }

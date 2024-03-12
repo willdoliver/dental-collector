@@ -44,8 +44,8 @@ class UniodontoController():
                     print(uf, ' - ', city_name)
                     LoggerMessageHelper.log_message(log_file, uf + ' - ' + city_name)
 
-                    city_done = summary_data_repository.find_data(uf, city_name)
-                    if city_done is not None:
+                    city_done = summary_data_repository.find_data_range_date(uf, city_name)
+                    if city_done is None:
                         print('Skipping city...')
                         LoggerMessageHelper.log_message(log_file, 'Skipping city...')
                         continue
@@ -73,12 +73,17 @@ class UniodontoController():
                                 rows = []
                                 rows.append([td.get_text(strip=True) for td in detail_data.find_all('td')])
 
+                                bairro = None
+                                if (rows[0][0]).split(',')[-3] is not None:
+                                    bairro = (rows[0][0]).split(',')[-4]
+
                             dentista = {
                                 "nome": name,
                                 "cro": cro_cnpj,
                                 "tipo_estabelecimento": tipo_estabelecimento,
                                 "especialidade": atuacao,
                                 "logradouro": rows[0][0],
+                                "bairro": bairro,
                                 "telefone": rows[0][1],
                                 "cidade": city_name,
                                 "uf": uf,

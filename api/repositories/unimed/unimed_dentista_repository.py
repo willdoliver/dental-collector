@@ -25,7 +25,7 @@ class DentistaOrm(Base):
     cidade = Column(String(64), default=None)
     latitude = Column(String(32), nullable=False)
     longitude = Column(String(32), nullable=False)
-    areas_atuacao = Column(String(220), default=None)
+    especialidades = Column(String(220), default=None)
     telefone = Column(String(220), nullable=False)
     email = Column(String(100), default=None)
     data_atualizacao = Column(DateTime(timezone=True), default=None)
@@ -54,7 +54,7 @@ class DentistaRepository:
         finally:
             db.close()
 
-    def update_dentista(self, id, item):
+    def update_dentista(self, id: int, item: dict):
         db = SessionLocal()
         try:
             dentista_orm = db.query(DentistaOrm).filter(DentistaOrm.id == id).first()
