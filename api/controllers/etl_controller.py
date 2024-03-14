@@ -28,7 +28,7 @@ class ETLController():
         }
 
     def sync_data(self):
-        log_file = 'logs/log_etl_' + datetime.now().strftime("%Y_%m_%d")
+        log_file = 'logs/log_etl_' + datetime.now().strftime("%Y_%m_%d") + '.log'
         LoggerMessageHelper.log_message(log_file, 'Sync Data Started')
 
         try:
@@ -80,7 +80,6 @@ class ETLController():
     def load(self, df: pd.DataFrame, table_name: str) -> None:
         urls = []
         urls.append(os.getenv("URI_MYSQL_DENTAL"))
-        urls.append(os.getenv("URI_MYSQL_LIFE"))
 
         for url in urls:
             engine = create_engine(url)
