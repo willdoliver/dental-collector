@@ -80,6 +80,7 @@ class ETLController():
     def load(self, df: pd.DataFrame, table_name: str) -> None:
         urls = []
         urls.append(os.getenv("URI_MYSQL_DENTAL"))
+        urls.append(os.getenv("URI_MYSQL_LIFE"))
 
         for url in urls:
             engine = create_engine(url)

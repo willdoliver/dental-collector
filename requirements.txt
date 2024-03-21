@@ -13,3 +13,4 @@ numpy==1.24.4
 sqlalchemy==2.0.27
 pymysql==1.1.0
 pydantic==2.6.1
+cryptography==1.16.0
