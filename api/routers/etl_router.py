@@ -12,9 +12,13 @@ router = APIRouter(
 )
 
 @router.get("/create_tables/")
-async def find_dentistas():
+async def create_tables():
     return etl_controller.create_tables()
 
 @router.get("/sync_data/")
-async def get_dentistas():
+async def sync_data():
     return etl_controller.sync_data()
+
+@router.get("/clone_database/")
+async def clone_database():
+    return etl_controller.clone_database()
